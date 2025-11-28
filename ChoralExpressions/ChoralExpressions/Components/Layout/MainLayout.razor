@@ -1,0 +1,76 @@
+﻿@inherits LayoutComponentBase
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            <i class="bi bi-music-note-list me-2"></i>Choral Expressions
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#donate">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-gold ms-lg-3 px-4" href="#contact">Book Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    @Body
+</main>
+
+<!-- Footer -->
+<footer class="site-footer py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="text-gold mb-3">
+                    <i class="bi bi-music-note-list me-2"></i>Choral Expressions
+                </h5>
+                <p class="text-light-muted">
+                    A 33-member mixed-voice choral ensemble dedicated to classical mastery and soulful celebration.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="text-gold mb-3">Contact Us</h5>
+                <ul class="list-unstyled text-light-muted">
+                    <li class="mb-2"><i class="bi bi-envelope me-2"></i>cexpressionevents@gmail.com</li>
+                    <li><i class="bi bi-geo-alt me-2"></i>Toronto, Ontario</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="text-gold mb-3">Follow Us</h5>
+                <div class="social-links">
+                    <a href="#" class="social-icon me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="social-icon me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="social-icon me-3"><i class="bi bi-youtube fs-4"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-twitter-x fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-gold my-4">
+        <div class="text-center text-light-muted">
+            <small>&copy; @DateTime.Now.Year Choral Expressions. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

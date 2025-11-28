@@ -1,0 +1,45 @@
+/* ============================================
+   MAIN LAYOUT SCOPED STYLES
+   Voices of Harmony - Marketing Layout
+   ============================================ */
+
+/* Main content wrapper */
+main {
+    min-height: 100vh;
+}
+
+/* Blazor Error UI - Dark Theme */
+#blazor-error-ui {
+    color-scheme: dark only;
+    background: linear-gradient(135deg, #2b1111, #1a0505);
+    border-top: 2px solid #d4af37;
+    bottom: 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #fff;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+    color: #d4af37;
+    font-size: 1.25rem;
+}
+
+#blazor-error-ui .reload {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#blazor-error-ui .reload:hover {
+    text-decoration: underline;
+}

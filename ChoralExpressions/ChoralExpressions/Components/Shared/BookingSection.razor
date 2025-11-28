@@ -1,0 +1,87 @@
+@* ============================================
+   BOOKING SECTION COMPONENT
+   Reusable "Hire Us" section with flashy service cards
+   ============================================ *@
+
+<section class="booking-section py-5" style="background-color: var(--dark-surface);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4 text-white fw-bold">@Title</h2>
+            <p class="lead text-gold">@Subtitle</p>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var service in Services)
+            {
+                <div class="col-md-6 col-lg-3">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi @service.Icon fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">@service.Title</h4>
+                            <p class="card-text text-light-muted">@service.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (!string.IsNullOrEmpty(ButtonText))
+        {
+            <div class="text-center mt-5">
+                <a href="@ButtonLink" class="btn btn-gold btn-lg px-5 rounded-pill shadow-lg">
+                    <i class="bi bi-envelope me-2"></i>@ButtonText
+                </a>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "Celebrate With Us";
+
+    [Parameter]
+    public string Subtitle { get; set; } = "Elevate your event with the power of 33 voices.";
+
+    [Parameter]
+    public string ButtonText { get; set; } = "Inquire for Booking";
+
+    [Parameter]
+    public string ButtonLink { get; set; } = "#contact";
+
+    [Parameter]
+    public List<ServiceItem> Services { get; set; } = new()
+    {
+        new ServiceItem
+        {
+            Icon = "bi-music-note-beamed",
+            Title = "Black History Month",
+            Description = "Deeply moving spirituals, gospel, and historical works celebrating heritage and resilience."
+        },
+        new ServiceItem
+        {
+            Icon = "bi-star-fill",
+            Title = "Christmas & Holidays",
+            Description = "From Silent Night to Joy to the World, we bring the majesty of the season to your venue."
+        },
+        new ServiceItem
+        {
+            Icon = "bi-brightness-high-fill",
+            Title = "Easter & Lent",
+            Description = "Sacred classical pieces that reflect the solemnity and glory of the Easter season."
+        },
+        new ServiceItem
+        {
+            Icon = "bi-calendar-check-fill",
+            Title = "Your Celebration",
+            Description = "Weddings, anniversaries, or corporate gatherings—hire us to entertain and inspire."
+        }
+    };
+
+    public class ServiceItem
+    {
+        public string Icon { get; set; } = "";
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+    }
+}
