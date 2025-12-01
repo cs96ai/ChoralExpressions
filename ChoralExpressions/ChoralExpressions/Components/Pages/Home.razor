@@ -1,4 +1,8 @@
 ﻿@page "/"
+@rendermode InteractiveServer
+@using System.Net
+@using System.Net.Mail
+@using System.ComponentModel.DataAnnotations
 
 <PageTitle>Choral Expressions | 33 Voices. Infinite Spirit.</PageTitle>
 
@@ -26,57 +30,137 @@
             <p class="section-subtitle">Elevate your event with the power of 33 voices</p>
         </div>
 
-        <div class="row g-4">
+        <!-- Row 1: Seasonal Events -->
+        <div class="row g-4 mb-4">
             <!-- Black History Month -->
             <div class="col-md-6 col-lg-3">
-                <div class="card service-card h-100 text-white border-0">
-                    <div class="card-body text-center">
-                        <i class="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
-                        <h4 class="card-title">Black History Month</h4>
-                        <p class="card-text text-light-muted">
-                            Deeply moving spirituals, gospel, and historical works celebrating heritage and resilience.
-                        </p>
+                <a href="/services/black-history-month" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Black History Month</h4>
+                            <p class="card-text text-light-muted">
+                                Deeply moving spirituals, gospel, and historical works celebrating heritage and resilience.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Christmas & Holidays -->
             <div class="col-md-6 col-lg-3">
-                <div class="card service-card h-100 text-white border-0">
-                    <div class="card-body text-center">
-                        <i class="bi bi-star-fill fs-1 text-gold mb-3 d-block"></i>
-                        <h4 class="card-title">Christmas & Holidays</h4>
-                        <p class="card-text text-light-muted">
-                            From Silent Night to Joy to the World, we bring the majesty of the season to your venue.
-                        </p>
+                <a href="/services/christmas" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-star-fill fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Christmas & Holidays</h4>
+                            <p class="card-text text-light-muted">
+                                From Silent Night to Joy to the World, we bring the majesty of the season to your venue.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Easter & Lent -->
             <div class="col-md-6 col-lg-3">
-                <div class="card service-card h-100 text-white border-0">
-                    <div class="card-body text-center">
-                        <i class="bi bi-brightness-high-fill fs-1 text-gold mb-3 d-block"></i>
-                        <h4 class="card-title">Easter & Lent</h4>
-                        <p class="card-text text-light-muted">
-                            Sacred classical pieces that reflect the solemnity and glory of the Easter season.
-                        </p>
+                <a href="/services/easter" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-brightness-high-fill fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Easter & Lent</h4>
+                            <p class="card-text text-light-muted">
+                                Sacred classical pieces that reflect the solemnity and glory of the Easter season.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
-            <!-- Private Celebrations -->
+            <!-- Weddings -->
             <div class="col-md-6 col-lg-3">
-                <div class="card service-card h-100 text-white border-0">
-                    <div class="card-body text-center">
-                        <i class="bi bi-calendar-check-fill fs-1 text-gold mb-3 d-block"></i>
-                        <h4 class="card-title">Your Celebration</h4>
-                        <p class="card-text text-light-muted">
-                            Weddings, anniversaries, or corporate gatherings—hire us to entertain and inspire.
-                        </p>
+                <a href="/services/wedding" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-heart-fill fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Weddings</h4>
+                            <p class="card-text text-light-muted">
+                                Make your special day unforgettable with the breathtaking sound of 33 voices.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Row 2: Life Events & Business -->
+        <div class="row g-4">
+            <!-- Celebration of Life -->
+            <div class="col-md-6 col-lg-3">
+                <a href="/services/celebration-of-life" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-flower1 fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Celebration of Life</h4>
+                            <p class="card-text text-light-muted">
+                                Honor loved ones with music that comforts, uplifts, and celebrates a life well lived.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Corporate Events -->
+            <div class="col-md-6 col-lg-3">
+                <a href="/services/corporate" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-building fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Corporate Events</h4>
+                            <p class="card-text text-light-muted">
+                                Galas, conferences, and client appreciation events elevated with live choral music.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Store Openings -->
+            <div class="col-md-6 col-lg-3">
+                <a href="/services/store-opening" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-shop fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Store Openings</h4>
+                            <p class="card-text text-light-muted">
+                                Launch your business with impact—draw crowds and create unforgettable buzz.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Other Celebrations -->
+            <div class="col-md-6 col-lg-3">
+                <a href="#contact" class="text-decoration-none">
+                    <div class="card service-card h-100 text-white border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calendar-check-fill fs-1 text-gold mb-3 d-block"></i>
+                            <h4 class="card-title">Your Celebration</h4>
+                            <p class="card-text text-light-muted">
+                                Anniversaries, graduations, or any special occasion—tell us your vision.
+                            </p>
+                            <span class="btn btn-outline-gold btn-sm rounded-pill mt-2">Contact Us</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -160,53 +244,241 @@
                     <p class="section-subtitle">Let us bring the gift of music to your celebration</p>
                 </div>
                 <div class="donation-card">
-                    <form>
+                    <EditForm Model="booking" OnValidSubmit="HandleBookingSubmit">
+                        <DataAnnotationsValidator />
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label text-light-muted">Your Name</label>
-                                <input type="text" class="form-control form-control-dark" placeholder="Full Name">
+                                <label class="form-label text-light-muted">Your Name <span class="text-gold">*</span></label>
+                                <InputText class="form-control form-control-dark" @bind-Value="booking.Name" placeholder="Full Name" />
+                                <ValidationMessage For="@(() => booking.Name)" />
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label text-light-muted">Email Address</label>
-                                <input type="email" class="form-control form-control-dark" placeholder="email@example.com">
+                                <label class="form-label text-light-muted">Email Address <span class="text-gold">*</span></label>
+                                <InputText type="email" class="form-control form-control-dark" @bind-Value="booking.Email" placeholder="email@example.com" />
+                                <ValidationMessage For="@(() => booking.Email)" />
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label text-light-muted">Phone Number</label>
-                                <input type="tel" class="form-control form-control-dark" placeholder="(555) 123-4567">
+                                <InputText class="form-control form-control-dark" @bind-Value="booking.Phone" placeholder="(416) 555-1234" />
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label text-light-muted">Event Type</label>
-                                <select class="form-control form-control-dark">
+                                <label class="form-label text-light-muted">Event Type <span class="text-gold">*</span></label>
+                                <InputSelect class="form-control form-control-dark" @bind-Value="booking.EventType">
                                     <option value="">Select Event Type</option>
-                                    <option value="christmas">Christmas Concert</option>
-                                    <option value="easter">Easter/Lenten Service</option>
-                                    <option value="bhm">Black History Month</option>
-                                    <option value="wedding">Wedding</option>
-                                    <option value="corporate">Corporate Event</option>
-                                    <option value="other">Other Celebration</option>
-                                </select>
+                                    <option value="Christmas Concert">Christmas Concert</option>
+                                    <option value="Easter/Lenten Service">Easter/Lenten Service</option>
+                                    <option value="Black History Month">Black History Month</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Celebration of Life">Celebration of Life</option>
+                                    <option value="Corporate Event">Corporate Event</option>
+                                    <option value="Store Opening">Store Opening</option>
+                                    <option value="Other">Other Celebration</option>
+                                </InputSelect>
+                                <ValidationMessage For="@(() => booking.EventType)" />
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label text-light-muted">Preferred Date</label>
-                                <input type="date" class="form-control form-control-dark">
+                                <label class="form-label text-light-muted">Preferred Date <span class="text-gold">*</span></label>
+                                <InputDate class="form-control form-control-dark" @bind-Value="booking.EventDate" />
+                                <ValidationMessage For="@(() => booking.EventDate)" />
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label text-light-muted">Venue Location</label>
-                                <input type="text" class="form-control form-control-dark" placeholder="City, State">
+                                <label class="form-label text-light-muted">Venue Location <span class="text-gold">*</span></label>
+                                <InputText class="form-control form-control-dark" @bind-Value="booking.VenueLocation" placeholder="City, Province" />
+                                <ValidationMessage For="@(() => booking.VenueLocation)" />
                             </div>
                             <div class="col-12">
                                 <label class="form-label text-light-muted">Additional Details</label>
-                                <textarea class="form-control form-control-dark" rows="4" placeholder="Tell us about your event, expected audience size, and any special requests..."></textarea>
+                                <InputTextArea class="form-control form-control-dark" rows="4" @bind-Value="booking.Details" placeholder="Tell us about your event, expected audience size, and any special requests..." />
                             </div>
                             <div class="col-12 text-center mt-4">
-                                <button type="submit" class="btn btn-gold btn-lg px-5 rounded-pill">
-                                    <i class="bi bi-send me-2"></i>Submit Inquiry
+                                <button type="submit" class="btn btn-gold btn-lg px-5 rounded-pill" disabled="@isSubmitting">
+                                    @if (isSubmitting)
+                                    {
+                                        <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                        <span>Sending...</span>
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-send me-2"></i>
+                                        <span>Submit Inquiry</span>
+                                    }
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </EditForm>
+                    
+                    @if (showSuccess)
+                    {
+                        <div class="alert alert-success mt-4 border-0" role="alert">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            <strong>Thank you!</strong> Your booking inquiry has been sent successfully. We'll respond within one business day.
+                        </div>
+                    }
+                    
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger mt-4 border-0" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                            <strong>Error:</strong> @errorMessage
+                        </div>
+                    }
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@code {
+    private BookingInquiry booking = new();
+    private bool isSubmitting = false;
+    private bool showSuccess = false;
+    private string errorMessage = string.Empty;
+    
+    private async Task HandleBookingSubmit()
+    {
+        isSubmitting = true;
+        showSuccess = false;
+        errorMessage = string.Empty;
+        
+        try
+        {
+            // Configure Gmail SMTP client
+            var smtp = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(
+                    "elevatemedical2026@gmail.com",
+                    "rfcounkwcotljcij"  // Replace with your actual 16-digit app password
+                )
+            };
+            
+            // Build email body HTML
+            var emailBody = $@"
+                <html>
+                <body style='font-family: Arial, sans-serif; background-color: #1a0505; color: #ffffff;'>
+                    <div style='max-width: 600px; margin: 0 auto; padding: 20px;'>
+                        <h2 style='color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px;'>
+                            New Booking Inquiry - Choral Expressions
+                        </h2>
+                        
+                        <table style='width: 100%; border-collapse: collapse; margin-top: 20px;'>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Name:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{booking.Name}</td>
+                            </tr>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Email:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{booking.Email}</td>
+                            </tr>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Phone:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{(string.IsNullOrWhiteSpace(booking.Phone) ? "Not provided" : booking.Phone)}</td>
+                            </tr>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Event Type:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{booking.EventType}</td>
+                            </tr>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Event Date:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{booking.EventDate:MMMM dd, yyyy}</td>
+                            </tr>
+                            <tr>
+                                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Venue Location:</td>
+                                <td style='padding: 10px; color: #ffffff;'>{booking.VenueLocation}</td>
+                            </tr>
+                        </table>
+                        
+                        <div style='margin-top: 20px; padding: 15px; background-color: #2b1111; border-radius: 8px;'>
+                            <h3 style='color: #d4af37; margin-top: 0;'>Additional Details:</h3>
+                            <p style='color: #ffffff; white-space: pre-wrap;'>{(string.IsNullOrWhiteSpace(booking.Details) ? "No additional details provided." : booking.Details)}</p>
+                        </div>
+                        
+                        <hr style='border: 1px solid #d4af37; margin-top: 30px;' />
+                        <p style='color: #888; font-size: 12px;'>
+                            Submitted on: {DateTime.Now:MMMM dd, yyyy 'at' h:mm tt}
+                        </p>
+                    </div>
+                </body>
+                </html>
+            ";
+            
+            // Create email message
+            var message = new MailMessage();
+            message.From = new MailAddress("elevatemedical2026@gmail.com", "Choral Expressions Booking");
+            message.To.Add(new MailAddress("cexpressionevents@gmail.com", "Choral Expressions"));
+            message.ReplyToList.Add(new MailAddress(booking.Email, booking.Name));
+            message.Subject = $"New Booking Inquiry: {booking.EventType} - {booking.Name}";
+            message.Body = emailBody;
+            message.IsBodyHtml = true;
+            
+            // Send email
+            await smtp.SendMailAsync(message);
+            
+            showSuccess = true;
+            booking = new(); // Reset form
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to send message. Please try again or contact us directly at cexpressionevents@gmail.com.";
+            Console.WriteLine($"Email error: {ex.Message}");
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+    
+    public class BookingInquiry
+    {
+        [Required(ErrorMessage = "Your name is required")]
+        public string Name { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; } = string.Empty;
+        
+        public string Phone { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "Please select an event type")]
+        public string EventType { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "Please select a preferred date")]
+        public DateTime? EventDate { get; set; }
+        
+        [Required(ErrorMessage = "Venue location is required")]
+        public string VenueLocation { get; set; } = string.Empty;
+        
+        public string Details { get; set; } = string.Empty;
+    }
+}
+
+<style>
+    /* Validation error message styling */
+    .validation-message {
+        display: block;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(220, 38, 38, 0.2);
+        color: #fca5a5;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        border-left: 3px solid #dc2626;
+    }
+    
+    /* Success alert dark theme override */
+    .alert-success {
+        background-color: rgba(34, 197, 94, 0.2);
+        color: #86efac;
+        border-left: 3px solid #22c55e;
+    }
+    
+    /* Danger alert dark theme override */
+    .alert-danger {
+        background-color: rgba(220, 38, 38, 0.2);
+        color: #fca5a5;
+        border-left: 3px solid #dc2626;
+    }
+</style>
