@@ -40,8 +40,16 @@ function Layout({ children }) {
               <li className="nav-item">
                 <a className="nav-link" href="/#services">Services</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#about">About Us</a>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul className="dropdown-menu dropdown-menu-dark">
+                  <li><Link className="dropdown-item" to="/about-choir">The Choir</Link></li>
+                  <li><Link className="dropdown-item" to="/about-director">Our Director</Link></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><a className="dropdown-item" href="/#about">Overview</a></li>
+                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/#donate">Donate</a>

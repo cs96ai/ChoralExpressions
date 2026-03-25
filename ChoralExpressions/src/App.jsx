@@ -8,6 +8,8 @@ import BlackHistoryMonth from './pages/services/BlackHistoryMonth';
 import CelebrationOfLife from './pages/services/CelebrationOfLife';
 import Corporate from './pages/services/Corporate';
 import StoreOpening from './pages/services/StoreOpening';
+import AboutChoir from './pages/AboutChoir';
+import AboutDirector from './pages/AboutDirector';
 import './App.css';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/services/celebration-of-life" element={<CelebrationOfLife />} />
           <Route path="/services/corporate" element={<Corporate />} />
           <Route path="/services/store-opening" element={<StoreOpening />} />
+          <Route path="/about-choir" element={<AboutChoir />} />
+          <Route path="/about-director" element={<AboutDirector />} />
         </Routes>
       </Layout>
     </Router>
