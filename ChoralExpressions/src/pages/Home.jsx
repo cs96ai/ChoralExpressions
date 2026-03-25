@@ -59,7 +59,7 @@ function Home() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with actual key from web3forms.com
+          access_key: 'b2ba2588-3029-4025-a711-54602d90e3e2', // Replace with actual key from web3forms.com
           subject: `New Booking Inquiry: ${formData.eventType} - ${formData.name}`,
           from_name: 'Choral Expressions Website',
           name: formData.name,
