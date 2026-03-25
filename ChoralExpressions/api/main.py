@@ -239,7 +239,25 @@ Submitted: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 # Mount static files (React build)
 static_path = Path(__file__).parent.parent / "static"
 if static_path.exists():
-    app.mount("/assets", StaticFiles(directory=str(static_path / "assets")), name="assets")
+    # Mount assets folder
+    assets_path = static_path / "assets"
+    if assets_path.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_path)), name="assets")
+    
+    # Serve favicon and other root-level static files
+    @app.get("/favicon.{ext}")
+    async def serve_favicon(ext: str):
+        favicon_file = static_path / f"favicon.{ext}"
+        if favicon_file.exists():
+            return FileResponse(favicon_file)
+        raise HTTPException(status_code=404, detail="Favicon not found")
+    
+    @app.get("/icons.svg")
+    async def serve_icons():
+        icons_file = static_path / "icons.svg"
+        if icons_file.exists():
+            return FileResponse(icons_file)
+        raise HTTPException(status_code=404, detail="Icons not found")
     
     # Catch-all route for React Router (SPA)
     @app.get("/{full_path:path}")
@@ -247,6 +265,11 @@ if static_path.exists():
         # If it's an API route, let it pass through
         if full_path.startswith("api/"):
             raise HTTPException(status_code=404, detail="API endpoint not found")
+        
+        # Check if it's a static file request
+        file_path = static_path / full_path
+        if file_path.is_file():
+            return FileResponse(file_path)
         
         # For all other routes, serve index.html (React will handle routing)
         index_file = static_path / "index.html"
