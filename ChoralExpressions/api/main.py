@@ -36,10 +36,6 @@ GMAIL_USER = os.getenv("GMAIL_USER", "choralexpressionss@gmail.com")
 GMAIL_PASS = os.getenv("GMAIL_PASS", "Sutherlan1!")
 RECIPIENTS = ["claudiamitch01@gmail.com", "claudia.mitchell@rogers.com"]
 
-@app.get("/")
-def read_root():
-    return {"status": "ok", "message": "Choral Expressions Email API"}
-
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "message": "Email API is running"}
