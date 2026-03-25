@@ -1,4 +1,4 @@
-# Build stage
+# Build stage - Build React frontend
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -9,23 +9,29 @@ COPY package*.json ./
 # Install dependencies
 RUN npm ci
 
-# Copy source code
+# Copy source code (excluding api folder)
 COPY . .
 
-# Build the application
+# Build the React application
 RUN npm run build
 
-# Production stage
-FROM nginx:alpine
+# Production stage - Python FastAPI + Static files
+FROM python:3.11-slim
 
-# Copy built assets from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /app
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy FastAPI backend
+COPY api/ ./api/
+
+# Copy built React frontend from builder
+COPY --from=builder /app/dist ./static
 
 # Expose port 8080 (Fly.io default)
 EXPOSE 8080
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start FastAPI server (it will serve both API and static files)
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080"]

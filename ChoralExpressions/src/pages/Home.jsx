@@ -50,51 +50,26 @@ function Home() {
     setErrorMessage('');
 
     try {
-      // Using Web3Forms - free form backend service
-      // You can get your access key from https://web3forms.com
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Call FastAPI backend to send email via Gmail
+      const response = await fetch('/api/send-booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'b2ba2588-3029-4025-a711-54602d90e3e2', // Replace with actual key from web3forms.com
-          subject: `New Booking Inquiry: ${formData.eventType} - ${formData.name}`,
-          from_name: 'Choral Expressions Website',
           name: formData.name,
           email: formData.email,
-          phone: formData.phone || 'Not provided',
-          event_type: formData.eventType,
-          event_date: formData.eventDate,
-          venue_location: formData.venueLocation,
-          message: `
-BOOKING INQUIRY DETAILS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Contact Information:
-• Name: ${formData.name}
-• Email: ${formData.email}
-• Phone: ${formData.phone || 'Not provided'}
-
-Event Details:
-• Event Type: ${formData.eventType}
-• Preferred Date: ${formData.eventDate}
-• Venue Location: ${formData.venueLocation}
-
-Additional Details:
-${formData.details || 'No additional details provided.'}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Submitted: ${new Date().toLocaleString()}
-          `,
-          to_email: 'cexpressionevents@gmail.com'
+          phone: formData.phone,
+          eventType: formData.eventType,
+          eventDate: formData.eventDate,
+          venueLocation: formData.venueLocation,
+          details: formData.details
         })
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (response.ok && data.success) {
         setShowSuccess(true);
         setFormData({
           name: '',
@@ -106,7 +81,7 @@ Submitted: ${new Date().toLocaleString()}
           details: ''
         });
       } else {
-        throw new Error(data.message || 'Failed to send email');
+        throw new Error(data.detail || data.message || 'Failed to send email');
       }
     } catch (error) {
       setErrorMessage('Failed to send message. Please try again or contact us directly at cexpressionevents@gmail.com.');
