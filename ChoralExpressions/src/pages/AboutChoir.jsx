@@ -1,3 +1,5 @@
+import choirImage from '../assets/choir.jpg';
+
 function AboutChoir() {
   return (
     <>
@@ -31,13 +33,27 @@ function AboutChoir() {
                 </div>
 
                 <div className="mb-5">
-                  <p className="text-light fs-5 mb-4" style={{lineHeight: '1.8'}}>
-                    Toronto's <strong className="text-gold">Choral Expressions</strong> is a faith-based collective of 33 exceptional vocalists whose dedication to Christ informs their approach to vocal ministry and devotion to healing through song. Currently under the directorship of the talented veteran Melvin Tolson, Choral Expressions' repertoire is vast and includes musical influences that transcend borders and includes Traditional Spirituals, Anthems, Hymns and Folk music, with nods to celebrated composers and arrangers, Moses Hogan, William Dawson, John Stoddart, and Rosephanye Powell.
-                  </p>
-                  
-                  <p className="text-light fs-5" style={{lineHeight: '1.8'}}>
-                    Leaning on the Adventist tradition of musical excellence, the members of Choral Expressions are committed to sharing their collective talents in music ministry across Southern Ontario and beyond.
-                  </p>
+                  <div className="row align-items-center g-4 mb-5">
+                    <div className="col-lg-6">
+                      <div className="rounded overflow-hidden shadow-lg" style={{border: '3px solid var(--gold-primary)'}}>
+                        <img 
+                          src={choirImage} 
+                          alt="Choral Expressions - 33 Voices United in Faith" 
+                          className="img-fluid w-100"
+                          style={{display: 'block'}}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <p className="text-light fs-5 mb-4" style={{lineHeight: '1.8'}}>
+                        Toronto's <strong className="text-gold">Choral Expressions</strong> is a faith-based collective of 33 exceptional vocalists whose dedication to Christ informs their approach to vocal ministry and devotion to healing through song. Currently under the directorship of the talented veteran Melvin Tolson, Choral Expressions' repertoire is vast and includes musical influences that transcend borders and includes Traditional Spirituals, Anthems, Hymns and Folk music, with nods to celebrated composers and arrangers, Moses Hogan, William Dawson, John Stoddart, and Rosephanye Powell.
+                      </p>
+                      
+                      <p className="text-light fs-5" style={{lineHeight: '1.8'}}>
+                        Leaning on the Adventist tradition of musical excellence, the members of Choral Expressions are committed to sharing their collective talents in music ministry across Southern Ontario and beyond.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="row g-4 mt-5">
