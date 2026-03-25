@@ -23,9 +23,9 @@ function CelebrationOfLife() {
               <p className="text-light-muted fs-5 mb-4">
                 Honor loved ones with music that comforts, uplifts, and celebrates a life well lived.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Celebration%20of%20Life#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Plan a Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

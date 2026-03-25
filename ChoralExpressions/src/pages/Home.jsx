@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 
 function Home() {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +12,18 @@ function Home() {
     venueLocation: '',
     details: ''
   });
+
+  // Pre-fill event type from URL parameter
+  useEffect(() => {
+    const eventType = searchParams.get('event');
+    if (eventType) {
+      setFormData(prev => ({ ...prev, eventType: decodeURIComponent(eventType) }));
+      // Scroll to contact form
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [searchParams]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');

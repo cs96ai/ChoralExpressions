@@ -25,9 +25,9 @@ function Wedding() {
                 celebrating your love. From the processional to the recessional, we create moments 
                 that will be treasured forever.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Wedding#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Your Wedding
-              </a>
+              </Link>
             </div>
           </div>
         </div>

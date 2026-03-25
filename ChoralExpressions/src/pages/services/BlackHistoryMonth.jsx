@@ -23,9 +23,9 @@ function BlackHistoryMonth() {
               <p className="text-light-muted fs-5 mb-4">
                 Deeply moving spirituals, gospel, and historical works that honor the African American experience and celebrate cultural heritage.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Black%20History%20Month#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book This Program
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -79,9 +79,9 @@ function BlackHistoryMonth() {
         <div className="container">
           <h2 className="text-white mb-3">Honor History Through Music</h2>
           <p className="text-light-muted mb-4">Book us for your Black History Month celebration.</p>
-          <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+          <Link to="/?event=Black%20History%20Month#contact" className="btn btn-gold btn-lg rounded-pill px-5">
             <i className="bi bi-send me-2"></i>Get in Touch
-          </a>
+          </Link>
         </div>
       </section>
     </>

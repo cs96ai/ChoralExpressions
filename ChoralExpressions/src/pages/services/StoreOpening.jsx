@@ -23,9 +23,9 @@ function StoreOpening() {
               <p className="text-light-muted fs-5 mb-4">
                 Launch your business with impact—draw crowds and create unforgettable buzz with live choral performance.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Store%20Opening#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

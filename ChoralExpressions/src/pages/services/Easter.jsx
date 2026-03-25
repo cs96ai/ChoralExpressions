@@ -23,9 +23,9 @@ function Easter() {
               <p className="text-light-muted fs-5 mb-4">
                 Experience the profound beauty of sacred choral music during the holiest season of the Christian calendar.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Easter%2FLenten%20Service#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Your Easter Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

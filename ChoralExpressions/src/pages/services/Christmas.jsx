@@ -24,9 +24,9 @@ function Christmas() {
                 From the reverent strains of "O Holy Night" to the jubilant celebration of "Joy to the World," 
                 our 33-voice ensemble brings the full majesty of Christmas to your venue.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Christmas%20Concert#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Your Christmas Event
-              </a>
+              </Link>
             </div>
           </div>
         </div>

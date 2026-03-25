@@ -23,9 +23,9 @@ function Corporate() {
               <p className="text-light-muted fs-5 mb-4">
                 Galas, conferences, and client appreciation events elevated with live choral music.
               </p>
-              <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Corporate%20Event#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
