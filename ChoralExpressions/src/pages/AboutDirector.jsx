@@ -7,8 +7,8 @@ function AboutDirector() {
         background: "linear-gradient(135deg, rgba(26, 5, 5, 0.9), rgba(13, 13, 13, 0.95)), url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        padding: '120px 0 80px',
-        minHeight: '75vh'
+        padding: '120px 0 60px',
+        minHeight: 'auto'
       }}>
         <div className="container">
           <div className="row align-items-center">
