@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import emailjs from 'emailjs-com';
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -51,78 +50,51 @@ function Home() {
     setErrorMessage('');
 
     try {
-      const emailBody = `
-        <html>
-        <body style='font-family: Arial, sans-serif; background-color: #1a0505; color: #ffffff;'>
-          <div style='max-width: 600px; margin: 0 auto; padding: 20px;'>
-            <h2 style='color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px;'>
-              New Booking Inquiry - Choral Expressions
-            </h2>
-            
-            <table style='width: 100%; border-collapse: collapse; margin-top: 20px;'>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Name:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.name}</td>
-              </tr>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Email:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.email}</td>
-              </tr>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Phone:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.phone || 'Not provided'}</td>
-              </tr>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Event Type:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.eventType}</td>
-              </tr>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Event Date:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.eventDate}</td>
-              </tr>
-              <tr>
-                <td style='padding: 10px; color: #d4af37; font-weight: bold;'>Venue Location:</td>
-                <td style='padding: 10px; color: #ffffff;'>${formData.venueLocation}</td>
-              </tr>
-            </table>
-            
-            <div style='margin-top: 20px; padding: 15px; background-color: #2b1111; border-radius: 8px;'>
-              <h3 style='color: #d4af37; margin-top: 0;'>Additional Details:</h3>
-              <p style='color: #ffffff; white-space: pre-wrap;'>${formData.details || 'No additional details provided.'}</p>
-            </div>
-            
-            <hr style='border: 1px solid #d4af37; margin-top: 30px;' />
-            <p style='color: #888; font-size: 12px;'>
-              Submitted on: ${new Date().toLocaleString()}
-            </p>
-          </div>
-        </body>
-        </html>
-      `;
-
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      // Using Web3Forms - free form backend service
+      // You can get your access key from https://web3forms.com
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          service_id: 'service_choralexp',
-          template_id: 'template_booking',
-          user_id: 'YOUR_EMAILJS_USER_ID',
-          template_params: {
-            from_name: formData.name,
-            from_email: formData.email,
-            phone: formData.phone,
-            event_type: formData.eventType,
-            event_date: formData.eventDate,
-            venue_location: formData.venueLocation,
-            message: formData.details,
-            to_email: 'cexpressionevents@gmail.com'
-          }
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with actual key from web3forms.com
+          subject: `New Booking Inquiry: ${formData.eventType} - ${formData.name}`,
+          from_name: 'Choral Expressions Website',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          event_type: formData.eventType,
+          event_date: formData.eventDate,
+          venue_location: formData.venueLocation,
+          message: `
+BOOKING INQUIRY DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Contact Information:
+• Name: ${formData.name}
+• Email: ${formData.email}
+• Phone: ${formData.phone || 'Not provided'}
+
+Event Details:
+• Event Type: ${formData.eventType}
+• Preferred Date: ${formData.eventDate}
+• Venue Location: ${formData.venueLocation}
+
+Additional Details:
+${formData.details || 'No additional details provided.'}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Submitted: ${new Date().toLocaleString()}
+          `,
+          to_email: 'cexpressionevents@gmail.com'
         })
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         setShowSuccess(true);
         setFormData({
           name: '',
@@ -134,7 +106,7 @@ function Home() {
           details: ''
         });
       } else {
-        throw new Error('Failed to send email');
+        throw new Error(data.message || 'Failed to send email');
       }
     } catch (error) {
       setErrorMessage('Failed to send message. Please try again or contact us directly at cexpressionevents@gmail.com.');
