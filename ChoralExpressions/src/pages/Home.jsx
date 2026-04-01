@@ -131,9 +131,9 @@ function Home() {
                 <div className="card service-card h-100 text-white border-0">
                   <div className="card-body text-center">
                     <i className="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
-                    <h4 className="card-title">Black History/Emancipation</h4>
+                    <h4 className="card-title">Black History<br/>Emancipation</h4>
                     <p className="card-text text-light-muted">
-                      Deeply moving spirituals, gospel, and historical works celebrating heritage and resilience.
+                      Spirituals, gospel, and works celebrating heritage and resilience.
                     </p>
                     <span className="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
                   </div>
@@ -169,6 +169,21 @@ function Home() {
                   </div>
                 </div>
               </Link>
+            </div>
+
+            <div className="col-md-6 col-lg-3">
+              <a href="#contact" className="text-decoration-none">
+                <div className="card service-card h-100 text-white border-0">
+                  <div className="card-body text-center">
+                    <i className="bi bi-calendar-check-fill fs-1 text-gold mb-3 d-block"></i>
+                    <h4 className="card-title">Your Celebration</h4>
+                    <p className="card-text text-light-muted">
+                      Anniversaries, graduations, or any special occasion—tell us your vision.
+                    </p>
+                    <span className="btn btn-outline-gold btn-sm rounded-pill mt-2">Contact Us</span>
+                  </div>
+                </div>
+              </a>
             </div>
 
           </div>
@@ -234,20 +249,6 @@ function Home() {
               </Link>
             </div>
 
-            <div className="col-md-6 col-lg-3">
-              <a href="#contact" className="text-decoration-none">
-                <div className="card service-card h-100 text-white border-0">
-                  <div className="card-body text-center">
-                    <i className="bi bi-calendar-check-fill fs-1 text-gold mb-3 d-block"></i>
-                    <h4 className="card-title">Your Celebration</h4>
-                    <p className="card-text text-light-muted">
-                      Anniversaries, graduations, or any special occasion—tell us your vision.
-                    </p>
-                    <span className="btn btn-outline-gold btn-sm rounded-pill mt-2">Contact Us</span>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
 
           <div className="text-center mt-5">
