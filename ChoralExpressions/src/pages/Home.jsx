@@ -175,6 +175,21 @@ function Home() {
 
           <div className="row g-4">
             <div className="col-md-6 col-lg-3">
+              <Link to="/services/church-services" className="text-decoration-none">
+                <div className="card service-card h-100 text-white border-0">
+                  <div className="card-body text-center">
+                    <i className="bi bi-church fs-1 text-gold mb-3 d-block"></i>
+                    <h4 className="card-title">Church Services</h4>
+                    <p className="card-text text-light-muted">
+                      Enhance your worship services and faith celebrations with inspiring choral music.
+                    </p>
+                    <span className="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="col-md-6 col-lg-3">
               <Link to="/services/celebration-of-life" className="text-decoration-none">
                 <div className="card service-card h-100 text-white border-0">
                   <div className="card-body text-center">
@@ -334,6 +349,7 @@ function Home() {
                         onChange={handleChange}
                       >
                         <option value="">Select Event Type</option>
+                        <option value="Church Service">Church Service</option>
                         <option value="Christmas Concert">Christmas Concert</option>
                         <option value="Easter Service">Easter Service</option>
                         <option value="Black History/Emancipation">Black History/Emancipation</option>
