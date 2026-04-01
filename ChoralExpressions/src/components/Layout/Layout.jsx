@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Layout.css';
 
 function Layout({ children }) {
+  const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.getElementById('mainNav');
@@ -16,6 +18,20 @@ function Layout({ children }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle scrolling to hash anchors
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <>
