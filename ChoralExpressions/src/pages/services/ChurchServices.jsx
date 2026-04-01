@@ -17,7 +17,7 @@ function ChurchServices() {
                 <i className="bi bi-arrow-left me-2"></i>Back to Services
               </Link>
               <h1 className="display-3 fw-bold text-white mb-3">
-                <i className="bi bi-church text-gold me-3"></i> Church Services
+                <i className="bi bi-building text-gold me-3"></i> Church Services
               </h1>
               <p className="lead text-gold fs-4 mb-4">Uplifting Worship Through Song</p>
               <p className="text-light-muted fs-5 mb-4">

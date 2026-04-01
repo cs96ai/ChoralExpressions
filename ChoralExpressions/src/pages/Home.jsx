@@ -193,7 +193,7 @@ function Home() {
               <Link to="/services/church-services" className="text-decoration-none">
                 <div className="card service-card h-100 text-white border-0">
                   <div className="card-body text-center">
-                    <i className="bi bi-church fs-1 text-gold mb-3 d-block"></i>
+                    <i className="bi bi-building fs-1 text-gold mb-3 d-block"></i>
                     <h4 className="card-title">Church Services</h4>
                     <p className="card-text text-light-muted">
                       Enhance your worship services and faith celebrations with inspiring choral music.
