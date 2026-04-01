@@ -169,10 +169,10 @@ function AboutDirector() {
               <div className="row g-4 mb-5">
                 <div className="col-md-4">
                   <div className="text-center p-4 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                    <i className="bi bi-ear fs-1 text-gold mb-3 d-block"></i>
-                    <h5 className="text-white mb-2">Exceptional Ear</h5>
+                    <i className="bi bi-lightbulb-fill fs-1 text-gold mb-3 d-block"></i>
+                    <h5 className="text-white mb-2">Inspiring Leadership</h5>
                     <p className="text-light-muted small mb-0">
-                      His ability to hear and correct the subtlest nuances in tone, balance, and blend is legendary among the choir members.
+                      His warm encouragement and genuine care for each member creates an atmosphere where voices flourish and confidence grows.
                     </p>
                   </div>
                 </div>
