@@ -112,10 +112,7 @@ function Home() {
           <p className="hero-subtitle animate-fade-in-up animate-delay-1">Classical Mastery & Soulful Celebration</p>
           <div className="d-flex justify-content-center gap-3 flex-wrap animate-fade-in-up animate-delay-2">
             <a href="#services" className="btn btn-gold btn-lg rounded-pill px-5">
-              <i className="bi bi-calendar-event me-2"></i>Hire Us
-            </a>
-            <a href="#donate" className="btn btn-outline-gold btn-lg rounded-pill px-5">
-              <i className="bi bi-heart me-2"></i>Support Our Mission
+              <i className="bi bi-calendar-event me-2"></i>Book Us
             </a>
           </div>
         </div>
@@ -134,7 +131,7 @@ function Home() {
                 <div className="card service-card h-100 text-white border-0">
                   <div className="card-body text-center">
                     <i className="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
-                    <h4 className="card-title">Black History Month</h4>
+                    <h4 className="card-title">Black History/Emancipation</h4>
                     <p className="card-text text-light-muted">
                       Deeply moving spirituals, gospel, and historical works celebrating heritage and resilience.
                     </p>
@@ -164,7 +161,7 @@ function Home() {
                 <div className="card service-card h-100 text-white border-0">
                   <div className="card-body text-center">
                     <i className="bi bi-brightness-high-fill fs-1 text-gold mb-3 d-block"></i>
-                    <h4 className="card-title">Easter & Lent</h4>
+                    <h4 className="card-title">Easter</h4>
                     <p className="card-text text-light-muted">
                       Sacred classical pieces that reflect the solemnity and glory of the Easter season.
                     </p>
@@ -174,20 +171,6 @@ function Home() {
               </Link>
             </div>
 
-            <div className="col-md-6 col-lg-3">
-              <Link to="/services/wedding" className="text-decoration-none">
-                <div className="card service-card h-100 text-white border-0">
-                  <div className="card-body text-center">
-                    <i className="bi bi-heart-fill fs-1 text-gold mb-3 d-block"></i>
-                    <h4 className="card-title">Weddings</h4>
-                    <p className="card-text text-light-muted">
-                      Make your special day unforgettable with the breathtaking sound of 33 voices.
-                    </p>
-                    <span className="btn btn-outline-gold btn-sm rounded-pill mt-2">Learn More</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
           </div>
 
           <div className="row g-4">
@@ -262,8 +245,8 @@ function Home() {
 
       <section id="about" className="section-burgundy">
         <div className="container">
-          <div className="row align-items-center g-5">
-            <div className="col-lg-6">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
               <h2 className="section-title text-white">The Choir</h2>
               <p className="section-subtitle mb-4">A Legacy of Excellence</p>
               <p className="text-light-muted fs-5">
@@ -290,31 +273,6 @@ function Home() {
                   <h3 className="text-gold mb-0">200+</h3>
                   <small className="text-light-muted">Performances</small>
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="donation-card" id="donate">
-                <h3 className="text-gold mb-3">
-                  <i className="bi bi-heart-fill me-2"></i>Support Our Mission
-                </h3>
-                <p className="text-light-muted mb-4">
-                  Your generous contributions help us purchase new sheet music, fund musical education 
-                  programs for young singers, and bring the gift of choral music to underserved communities.
-                </p>
-                <h5 className="text-white mb-3">Choose Your Impact</h5>
-                <div className="mb-4">
-                  <span className="donation-amount">$25</span>
-                  <span className="donation-amount">$50</span>
-                  <span className="donation-amount">$100</span>
-                  <span className="donation-amount">$250</span>
-                  <span className="donation-amount">Other</span>
-                </div>
-                <button className="btn btn-gold w-100 rounded-pill">
-                  <i className="bi bi-gift me-2"></i>Make a Donation
-                </button>
-                <p className="text-light-muted small mt-3 mb-0 text-center">
-                  <i className="bi bi-shield-check me-1"></i>Secure, tax-deductible contribution
-                </p>
               </div>
             </div>
           </div>
@@ -377,9 +335,8 @@ function Home() {
                       >
                         <option value="">Select Event Type</option>
                         <option value="Christmas Concert">Christmas Concert</option>
-                        <option value="Easter/Lenten Service">Easter/Lenten Service</option>
-                        <option value="Black History Month">Black History Month</option>
-                        <option value="Wedding">Wedding</option>
+                        <option value="Easter Service">Easter Service</option>
+                        <option value="Black History/Emancipation">Black History/Emancipation</option>
                         <option value="Celebration of Life">Celebration of Life</option>
                         <option value="Corporate Event">Corporate Event</option>
                         <option value="Store Opening">Store Opening</option>

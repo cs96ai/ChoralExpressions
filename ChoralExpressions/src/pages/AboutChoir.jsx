@@ -91,7 +91,7 @@ function AboutChoir() {
             <div className="col-lg-10">
               <div className="text-center mb-5">
                 <h2 className="section-title text-white">Our Musical Heritage</h2>
-                <p className="section-subtitle">Honoring the masters who inspire us</p>
+                <p className="section-subtitle">Honouring the masters who inspire us</p>
               </div>
 
               <div className="row g-4">
@@ -121,9 +121,9 @@ function AboutChoir() {
                   <div className="card service-card h-100 text-white border-0">
                     <div className="card-body p-4">
                       <i className="bi bi-globe-americas fs-2 text-gold mb-3 d-block"></i>
-                      <h4 className="card-title mb-3">Folk Music</h4>
+                      <h4 className="card-title mb-3">Classical Music</h4>
                       <p className="card-text text-light-muted">
-                        We celebrate musical traditions from around the world, bringing diverse cultural expressions to our performances.
+                        Featuring composers including Handel, Bach, Mendelssohn, Beethoven and more.
                       </p>
                     </div>
                   </div>
@@ -132,9 +132,9 @@ function AboutChoir() {
                   <div className="card service-card h-100 text-white border-0">
                     <div className="card-body p-4">
                       <i className="bi bi-star-fill fs-2 text-gold mb-3 d-block"></i>
-                      <h4 className="card-title mb-3">Master Composers</h4>
+                      <h4 className="card-title mb-3">Contemporary Masters</h4>
                       <p className="card-text text-light-muted">
-                        Featuring works by Moses Hogan, William Dawson, John Stoddart, and Rosephanye Powell.
+                        Featuring works arranged/composed by Moses Hogan, William Dawson, John Stoddart, Rosephanye Powell, John Rutter, Howard Helvey and more.
                       </p>
                     </div>
                   </div>

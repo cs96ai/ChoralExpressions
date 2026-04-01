@@ -48,11 +48,11 @@ function AboutDirector() {
                 <div className="mb-4" style={{width: '80px', height: '3px', background: 'linear-gradient(90deg, var(--gold-primary), var(--gold-light))'}}></div>
                 
                 <p className="text-light fs-5 mb-4" style={{lineHeight: '1.8'}}>
-                  Under the inspired leadership of <strong className="text-gold">Melvin Tolson</strong>, Choral Expressions has flourished into one of Toronto's most distinguished vocal ensembles. A veteran of choral music with decades of experience, Maestro Tolson brings an unparalleled combination of technical mastery, spiritual depth, and artistic vision to every rehearsal and performance.
+                  Under the inspired leadership of <strong className="text-gold">Melvin Tolson</strong>, Choral Expressions has flourished into one of Toronto's most distinguished vocal ensembles. A veteran of choral music with decades of experience, Melvin brings an unparalleled combination of technical mastery, spiritual depth, and artistic vision to every rehearsal and performance.
                 </p>
 
                 <p className="text-light fs-5 mb-4" style={{lineHeight: '1.8'}}>
-                  His tireless dedication to excellence is evident in every note the choir sings. Whether guiding the ensemble through the intricate harmonies of Moses Hogan's spirituals or the soaring anthems of William Dawson, Maestro Tolson's expertise ensures that each performance is not merely heard, but deeply felt.
+                  His tireless dedication to excellence is evident in every note the choir sings. Whether guiding the ensemble through the intricate harmonies of Moses Hogan's spirituals or the soaring anthems of William Dawson, Melvin's expertise ensures that each performance is not merely heard, but deeply felt.
                 </p>
 
                 <div className="row g-3 mt-4">
@@ -97,7 +97,7 @@ function AboutDirector() {
                       <i className="bi bi-lightbulb fs-2 text-gold mb-3 d-block"></i>
                       <h4 className="card-title mb-3">Visionary Artistry</h4>
                       <p className="card-text text-light-muted">
-                        Maestro Tolson's artistic vision extends beyond the notes on the page. He cultivates an environment where each vocalist can discover their fullest potential, creating a unified sound that is greater than the sum of its parts. His ability to draw out the emotional and spiritual essence of every piece transforms performances into transcendent experiences.
+                        Melvin's artistic vision extends beyond the notes on the page. He cultivates an environment where each vocalist can discover their fullest potential, creating a unified sound that is greater than the sum of its parts. His ability to draw out the emotional and spiritual essence of every piece transforms performances into transcendent experiences.
                       </p>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ function AboutDirector() {
                       <i className="bi bi-people-fill fs-2 text-gold mb-3 d-block"></i>
                       <h4 className="card-title mb-3">Mentor & Teacher</h4>
                       <p className="card-text text-light-muted">
-                        Beyond his role as director, Maestro Tolson serves as a mentor and spiritual guide to the choir members. His patient instruction, encouraging words, and unwavering commitment to each singer's growth have created a family atmosphere within the ensemble. He doesn't just teach music—he nurtures souls.
+                        Beyond his role as director, Melvin serves as a mentor and spiritual guide to the choir members. His patient instruction, encouraging words, and unwavering commitment to each singer's growth have created a family atmosphere within the ensemble. He doesn't just teach music—he nurtures souls.
                       </p>
                     </div>
                   </div>
@@ -119,7 +119,7 @@ function AboutDirector() {
                       <i className="bi bi-clock-history fs-2 text-gold mb-3 d-block"></i>
                       <h4 className="card-title mb-3">Unwavering Commitment</h4>
                       <p className="card-text text-light-muted">
-                        His dedication knows no bounds. From early morning rehearsals to late-night preparations, from selecting the perfect repertoire to fine-tuning every dynamic and phrase, Maestro Tolson's tireless work ethic sets the standard for the entire ensemble. His passion for excellence is contagious and inspiring.
+                        His dedication knows no bounds. From late-night preparations to selecting the perfect repertoire to fine-tuning every dynamic and phrase, Melvin's tireless work ethic sets the standard for the entire ensemble. His passion for excellence is contagious and inspiring.
                       </p>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ function AboutDirector() {
                       <i className="bi bi-music-note-list fs-2 text-gold mb-3 d-block"></i>
                       <h4 className="card-title mb-3">Cultural Steward</h4>
                       <p className="card-text text-light-muted">
-                        Maestro Tolson is deeply committed to preserving and celebrating the rich heritage of African American choral music while also embracing contemporary works and diverse musical traditions. His thoughtful programming honors the past while looking boldly toward the future, ensuring that Choral Expressions remains both rooted and relevant.
+                        Melvin is deeply committed to preserving and celebrating the rich heritage of African American choral music while also embracing contemporary works and diverse musical traditions. His thoughtful programming honours the past while looking boldly toward the future, ensuring that Choral Expressions remains both rooted and relevant.
                       </p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ function AboutDirector() {
                 <blockquote className="fs-4 text-white fst-italic mb-4" style={{lineHeight: '1.8'}}>
                   "Music is not just what we do—it is our ministry, our calling, and our gift to the world. Every rehearsal is an act of worship, every performance a testament to faith."
                 </blockquote>
-                <p className="text-gold fs-5">— The Philosophy of Maestro Melvin Tolson</p>
+                <p className="text-gold fs-5">— The Philosophy of Melvin Tolson</p>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ function AboutDirector() {
 
               <div className="text-center">
                 <p className="text-light fs-5 mb-4" style={{lineHeight: '1.8'}}>
-                  Under Maestro Tolson's leadership, Choral Expressions has become more than a choir—it is a family, a ministry, and a beacon of musical excellence in the community. His legacy is not just in the beautiful music the choir creates, but in the lives he has touched, the spirits he has lifted, and the countless hearts he has inspired through his tireless dedication to the art of choral music.
+                  Under Melvin's leadership, Choral Expressions has become more than a choir—it is a family, a ministry, and a beacon of musical excellence in the community. His legacy is not just in the beautiful music the choir creates, but in the lives he has touched, the spirits he has lifted, and the countless hearts he has inspired through his tireless dedication to the art of choral music.
                 </p>
               </div>
             </div>
@@ -209,7 +209,7 @@ function AboutDirector() {
       <section className="section-dark text-center py-5">
         <div className="container">
           <h2 className="text-white mb-3">Experience the Tolson Legacy</h2>
-          <p className="text-light-muted mb-4">Witness the artistry and passion of Choral Expressions under Maestro Tolson's direction.</p>
+          <p className="text-light-muted mb-4">Witness the artistry and passion of Choral Expressions under Melvin's direction.</p>
           <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
             <i className="bi bi-calendar-event me-2"></i>Book a Performance
           </a>

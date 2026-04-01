@@ -44,6 +44,10 @@ When a user fills out the booking form and clicks "Submit Inquiry":
 
 ## Email Format
 
+
+choralexpressionss@gmail.com
+Sutherlan1!
+
 The booking inquiry email will include:
 
 - **Contact Information**: Name, email, phone

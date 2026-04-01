@@ -17,13 +17,13 @@ function Easter() {
                 <i className="bi bi-arrow-left me-2"></i>Back to Services
               </Link>
               <h1 className="display-3 fw-bold text-white mb-3">
-                <i className="bi bi-brightness-high-fill text-gold me-3"></i>Easter & Lent
+                <i className="bi bi-brightness-high-fill text-gold me-3"></i>Easter
               </h1>
               <p className="lead text-gold fs-4 mb-4">Sacred Music for the Season of Renewal</p>
               <p className="text-light-muted fs-5 mb-4">
                 Experience the profound beauty of sacred choral music during the holiest season of the Christian calendar.
               </p>
-              <Link to="/?event=Easter%2FLenten%20Service#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Easter%20Service#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book Your Easter Service
               </Link>
             </div>
@@ -44,7 +44,7 @@ function Easter() {
                   <i className="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
                   <h4 className="card-title">Classical Masterworks</h4>
                   <p className="card-text text-light-muted">
-                    Excerpts from Bach's St. Matthew Passion, Handel's Messiah, and other timeless works.
+                    Excerpts from Handel's Messiah and other timeless works.
                   </p>
                 </div>
               </div>

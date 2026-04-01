@@ -19,9 +19,9 @@ function CelebrationOfLife() {
               <h1 className="display-3 fw-bold text-white mb-3">
                 <i className="bi bi-flower1 text-gold me-3"></i>Celebration of Life
               </h1>
-              <p className="lead text-gold fs-4 mb-4">Honoring Lives with Music</p>
+              <p className="lead text-gold fs-4 mb-4">Honouring Lives with Music</p>
               <p className="text-light-muted fs-5 mb-4">
-                Honor loved ones with music that comforts, uplifts, and celebrates a life well lived.
+                Honour loved ones with music that comforts, uplifts, and celebrates a life well lived.
               </p>
               <Link to="/?event=Celebration%20of%20Life#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Plan a Service

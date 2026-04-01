@@ -58,7 +58,7 @@ function Christmas() {
                   <i className="bi bi-globe fs-1 text-gold mb-3 d-block"></i>
                   <h4 className="card-title">World Carols</h4>
                   <p className="card-text text-light-muted">
-                    Celebrate diversity with carols from around the globe—African, Latin American, 
+                    Celebrate diversity with carols from around the globe—African, 
                     European, and Caribbean traditions.
                   </p>
                 </div>

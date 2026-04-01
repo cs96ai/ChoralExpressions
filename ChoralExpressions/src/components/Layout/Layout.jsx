@@ -21,7 +21,7 @@ function Layout({ children }) {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent" id="mainNav">
         <div className="container">
-          <Link className="navbar-brand fw-bold" to="/">
+          <Link className="navbar-brand fw-bold" to="/" style={{cursor: 'pointer'}}>
             <i className="bi bi-music-note-list me-2"></i>Choral Expressions
           </Link>
           <button 
@@ -52,7 +52,10 @@ function Layout({ children }) {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/#donate">Donate</a>
+                <Link className="nav-link" to="/events">Events</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/members">Members</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link btn btn-gold ms-lg-3 px-4" href="/#contact">Book Us</a>
@@ -87,10 +90,10 @@ function Layout({ children }) {
             <div className="col-lg-4">
               <h5 className="text-gold mb-3">Follow Us</h5>
               <div className="social-links">
-                <a href="#" className="social-icon me-3"><i className="bi bi-facebook fs-4"></i></a>
-                <a href="#" className="social-icon me-3"><i className="bi bi-instagram fs-4"></i></a>
-                <a href="#" className="social-icon me-3"><i className="bi bi-youtube fs-4"></i></a>
-                <a href="#" className="social-icon"><i className="bi bi-twitter-x fs-4"></i></a>
+                <a href="#" className="social-icon me-3" title="Coming Soon"><i className="bi bi-facebook fs-4"></i></a>
+                <a href="https://www.instagram.com/choraleexpressions" target="_blank" rel="noopener noreferrer" className="social-icon me-3"><i className="bi bi-instagram fs-4"></i></a>
+                <a href="#" className="social-icon me-3" title="Coming Soon"><i className="bi bi-youtube fs-4"></i></a>
+                <a href="#" className="social-icon" title="Coming Soon"><i className="bi bi-twitter-x fs-4"></i></a>
               </div>
             </div>
           </div>

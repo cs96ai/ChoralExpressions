@@ -10,6 +10,8 @@ import Corporate from './pages/services/Corporate';
 import StoreOpening from './pages/services/StoreOpening';
 import AboutChoir from './pages/AboutChoir';
 import AboutDirector from './pages/AboutDirector';
+import Events from './pages/Events';
+import Members from './pages/Members';
 import './App.css';
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="/services/store-opening" element={<StoreOpening />} />
           <Route path="/about-choir" element={<AboutChoir />} />
           <Route path="/about-director" element={<AboutDirector />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/members" element={<Members />} />
         </Routes>
       </Layout>
     </Router>

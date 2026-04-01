@@ -17,13 +17,13 @@ function BlackHistoryMonth() {
                 <i className="bi bi-arrow-left me-2"></i>Back to Services
               </Link>
               <h1 className="display-3 fw-bold text-white mb-3">
-                <i className="bi bi-music-note-beamed text-gold me-3"></i>Black History Month
+                <i className="bi bi-music-note-beamed text-gold me-3"></i>Black History/Emancipation
               </h1>
               <p className="lead text-gold fs-4 mb-4">Celebrating Heritage and Resilience</p>
               <p className="text-light-muted fs-5 mb-4">
                 Deeply moving spirituals, gospel, and historical works that honor the African American experience and celebrate cultural heritage.
               </p>
-              <Link to="/?event=Black%20History%20Month#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+              <Link to="/?event=Black%20History%2FEmancipation#contact" className="btn btn-gold btn-lg rounded-pill px-5">
                 <i className="bi bi-calendar-check me-2"></i>Book This Program
               </Link>
             </div>
@@ -78,8 +78,8 @@ function BlackHistoryMonth() {
       <section className="section-burgundy text-center py-5">
         <div className="container">
           <h2 className="text-white mb-3">Honor History Through Music</h2>
-          <p className="text-light-muted mb-4">Book us for your Black History Month celebration.</p>
-          <Link to="/?event=Black%20History%20Month#contact" className="btn btn-gold btn-lg rounded-pill px-5">
+          <p className="text-light-muted mb-4">Book us for your Black History Month or Emancipation celebration.</p>
+          <Link to="/?event=Black%20History%2FEmancipation#contact" className="btn btn-gold btn-lg rounded-pill px-5">
             <i className="bi bi-send me-2"></i>Get in Touch
           </Link>
         </div>
