@@ -67,8 +67,8 @@ function SingerDetail() {
   const getPartDescription = (part) => {
     switch(part) {
       case 'Soprano': return 'The highest vocal range, known for its bright and soaring quality.';
-      case 'Alto': return 'The lower female voice, providing rich harmonies and depth.';
-      case 'Tenor': return 'The highest male voice, often carrying the melody with power and clarity.';
+      case 'Alto': return 'A lower vocal range, providing rich harmonies and depth to the ensemble.';
+      case 'Tenor': return 'A higher vocal range, often carrying the melody with power and clarity.';
       case 'Bass': return 'The lowest vocal range, providing the foundation and strength of the choir.';
       case 'Director': return 'Leading Choral Expressions with vision, artistry, and dedication.';
       default: return '';
