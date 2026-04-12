@@ -12,7 +12,6 @@ import ChurchServices from './pages/services/ChurchServices';
 import AboutChoir from './pages/AboutChoir';
 import AboutDirector from './pages/AboutDirector';
 import Events from './pages/Events';
-import Members from './pages/Members';
 import Highlights from './pages/Highlights';
 import SingerDetail from './pages/SingerDetail';
 import './App.css';
@@ -34,9 +33,8 @@ function App() {
           <Route path="/about-choir" element={<AboutChoir />} />
           <Route path="/about-director" element={<AboutDirector />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/members" element={<Members />} />
-          <Route path="/highlights" element={<Highlights />} />
-          <Route path="/highlights/:id" element={<SingerDetail />} />
+          <Route path="/members" element={<Highlights />} />
+          <Route path="/members/:id" element={<SingerDetail />} />
         </Routes>
       </Layout>
     </Router>

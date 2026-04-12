@@ -64,10 +64,10 @@ function Highlights() {
       <section className="hero-section" style={{ minHeight: '40vh', padding: '120px 0 60px' }}>
         <div className="hero-content container">
           <h1 className="hero-title animate-fade-in-up">
-            <i className="bi bi-stars text-gold me-3"></i>Choir Highlights
+            <i className="bi bi-people-fill text-gold me-3"></i>Our Members
           </h1>
           <p className="hero-subtitle animate-fade-in-up animate-delay-1">
-            Meet the talented voices of Choral Expressions
+            33 Voices United in Faith and Song
           </p>
         </div>
       </section>
@@ -78,7 +78,7 @@ function Highlights() {
             {singers.map((singer, index) => (
               <div key={index} className="col-6 col-md-4 col-lg-3">
                 <Link 
-                  to={singer.id ? `/highlights/${singer.id}` : '#'} 
+                  to={singer.id ? `/members/${singer.id}` : '#'} 
                   className="text-decoration-none"
                   style={{ pointerEvents: singer.id ? 'auto' : 'none' }}
                 >

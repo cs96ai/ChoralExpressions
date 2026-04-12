@@ -74,9 +74,6 @@ function Layout({ children }) {
                 <Link className="nav-link" to="/members">Members</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/highlights">Highlights</Link>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link btn btn-gold ms-lg-3 px-4" href="/#contact">Book Us</a>
               </li>
             </ul>

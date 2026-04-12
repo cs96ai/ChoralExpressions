@@ -45,8 +45,8 @@ function SingerDetail() {
       <section className="section-dark" style={{ minHeight: '80vh', paddingTop: '120px' }}>
         <div className="container text-center">
           <h2 className="text-white mb-4">Singer Not Found</h2>
-          <Link to="/highlights" className="btn btn-gold rounded-pill px-5">
-            <i className="bi bi-arrow-left me-2"></i>Back to Highlights
+          <Link to="/members" className="btn btn-gold rounded-pill px-5">
+            <i className="bi bi-arrow-left me-2"></i>Back to Members
           </Link>
         </div>
       </section>
@@ -87,8 +87,8 @@ function SingerDetail() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <Link to="/highlights" className="btn btn-outline-gold btn-sm rounded-pill mb-4">
-                <i className="bi bi-arrow-left me-2"></i>Back to All Singers
+              <Link to="/members" className="btn btn-outline-gold btn-sm rounded-pill mb-4">
+                <i className="bi bi-arrow-left me-2"></i>Back to All Members
               </Link>
               <h1 className="display-3 fw-bold text-white mb-3">
                 {singer.name}
@@ -163,8 +163,8 @@ function SingerDetail() {
         <div className="container">
           <h2 className="text-white mb-3">Meet More of Our Choir</h2>
           <p className="text-light-muted mb-4">Discover the other talented voices of Choral Expressions</p>
-          <Link to="/highlights" className="btn btn-gold btn-lg rounded-pill px-5">
-            <i className="bi bi-people me-2"></i>View All Singers
+          <Link to="/members" className="btn btn-gold btn-lg rounded-pill px-5">
+            <i className="bi bi-people me-2"></i>View All Members
           </Link>
         </div>
       </section>
