@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Highlights() {
-  const singers = [
+  const singersData = [
     { id: 2451, name: "Marjorie Dunkley", part: "Soprano", sectionLeader: false },
     { id: 2461, name: "Dorreth Ingleton", part: "Soprano", sectionLeader: false },
     { id: 2499, name: "Rose Heavens-Worrell", part: "Soprano", sectionLeader: true },
@@ -36,6 +36,12 @@ function Highlights() {
     { id: 2817, name: "Melvin Tolson", part: "Director", sectionLeader: false },
     { id: null, name: "Christine Thompson", part: "Soprano", sectionLeader: false }
   ];
+
+  // Sort singers by section: Soprano, Alto, Tenor, Bass, Director
+  const sectionOrder = { 'Soprano': 1, 'Alto': 2, 'Tenor': 3, 'Bass': 4, 'Director': 5 };
+  const singers = [...singersData].sort((a, b) => {
+    return sectionOrder[a.part] - sectionOrder[b.part];
+  });
 
   const getPartColor = (part) => {
     switch(part) {
