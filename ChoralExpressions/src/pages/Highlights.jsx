@@ -37,9 +37,17 @@ function Highlights() {
   ];
 
   // Sort singers by section: Soprano, Alto, Tenor, Baritone, Bass, Director
+  // Then alphabetically by last name within each section
   const sectionOrder = { 'Soprano': 1, 'Alto': 2, 'Tenor': 3, 'Baritone': 4, 'Bass': 5, 'Director': 6 };
   const singers = [...singersData].sort((a, b) => {
-    return sectionOrder[a.part] - sectionOrder[b.part];
+    // First sort by section
+    const sectionDiff = sectionOrder[a.part] - sectionOrder[b.part];
+    if (sectionDiff !== 0) return sectionDiff;
+    
+    // Then sort alphabetically by last name within the same section
+    const aLastName = a.name.split(' ').pop();
+    const bLastName = b.name.split(' ').pop();
+    return aLastName.localeCompare(bLastName);
   });
 
   const getPartColor = (part) => {
