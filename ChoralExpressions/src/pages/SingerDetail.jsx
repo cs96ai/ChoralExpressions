@@ -28,7 +28,7 @@ function SingerDetail() {
     { id: 2711, name: "Jewel Scott", part: "Soprano", sectionLeader: false, gender: "F" },
     { id: 2719, name: "Sydney Ambrose", part: "Alto", sectionLeader: true, gender: "F" },
     { id: 2727, name: "Sanjay Gibson", part: "Bass", sectionLeader: false, gender: "M" },
-    { id: 2729, name: "Ayinde Roberts", part: "Bass", sectionLeader: false, gender: "F" },
+    { id: 2729, name: "Ayinde Roberts", part: "Bass", sectionLeader: false, gender: "M" },
     { id: 2738, name: "Shelley Patrick", part: "Alto", sectionLeader: false, gender: "F" },
     { id: 2748, name: "Winston Simpson", part: "Tenor", sectionLeader: false, gender: "M" },
     { id: 2763, name: "Chris Thompson", part: "Bass", sectionLeader: false, gender: "M" },
