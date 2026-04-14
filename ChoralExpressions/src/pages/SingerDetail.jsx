@@ -68,8 +68,8 @@ function SingerDetail() {
     switch(part) {
       case 'Soprano': return 'The highest vocal range, known for its bright and soaring quality.';
       case 'Alto': return 'A lower vocal range, providing rich harmonies and depth to the ensemble.';
-      case 'Tenor': return 'A higher vocal range, often carrying the melody with power and clarity.';
-      case 'Baritone': return 'A warm, middle-range voice bridging tenor and bass with rich, versatile tone.';
+      case 'Tenor': return 'Known for a bright, resonant timbre and powerful high notes, it is essential in opera, classical, and popular music. Tenors often sing melodic lines or high-tenor harmonies.';
+      case 'Baritone': return 'The most common male singing voice, positioned in the middle range between the higher tenor and lower bass. Characterized by a warm, rich, and powerful tone.';
       case 'Bass': return 'The lowest vocal range, providing the foundation and strength of the choir.';
       case 'Director': return 'Leading Choral Expressions with vision, artistry, and dedication.';
       default: return '';
