@@ -108,8 +108,8 @@ function Home() {
     <>
       <section className="hero-section">
         <div className="hero-content container">
-          <h1 className="hero-title animate-fade-in-up">33 Voices. Infinite Spirit.</h1>
-          <p className="hero-subtitle animate-fade-in-up animate-delay-1">Classical Mastery & Soulful Celebration</p>
+          <h1 className="hero-title animate-fade-in-up">Choral Expressions</h1>
+          <p className="hero-subtitle animate-fade-in-up animate-delay-1">Choral Artistry Rooted in Faith</p>
           <div className="d-flex justify-content-center gap-3 flex-wrap animate-fade-in-up animate-delay-2">
             <a href="#contact" className="btn btn-gold btn-lg rounded-pill px-5">
               <i className="bi bi-calendar-event me-2"></i>Book Us

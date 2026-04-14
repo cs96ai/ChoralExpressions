@@ -4,37 +4,37 @@ function SingerDetail() {
   const { id } = useParams();
 
   const singers = [
-    { id: 2451, name: "Marjorie Dunkley", part: "Soprano", sectionLeader: false },
-    { id: 2461, name: "Dorreth Ingleton", part: "Soprano", sectionLeader: false },
-    { id: 2499, name: "Rose Heavens-Worrell", part: "Soprano", sectionLeader: true },
-    { id: 2509, name: "Curtis Ambrose", part: "Tenor", sectionLeader: false },
-    { id: 2520, name: "Nigel Worrell", part: "Baritone", sectionLeader: false },
-    { id: 2537, name: "Michelle Hanson", part: "Alto", sectionLeader: false },
-    { id: 2551, name: "Brenda Knight", part: "Alto", sectionLeader: false },
-    { id: 2558, name: "Andrew Stewart", part: "Baritone", sectionLeader: false },
-    { id: 2559, name: "Vanessa Burton", part: "Soprano", sectionLeader: false },
-    { id: 2567, name: "Eslyn Blair", part: "Tenor", sectionLeader: false },
-    { id: 2574, name: "Margaret Simpson", part: "Soprano", sectionLeader: false },
-    { id: 2586, name: "June Smith", part: "Alto", sectionLeader: false },
-    { id: 2589, name: "Molly St. Hillarie", part: "Tenor", sectionLeader: false },
-    { id: 2602, name: "Mable MacIntosh", part: "Soprano", sectionLeader: false },
-    { id: 2622, name: "Annette Radelin", part: "Soprano", sectionLeader: false },
-    { id: 2627, name: "Claudia Stewart-Philip", part: "Soprano", sectionLeader: false },
-    { id: 2643, name: "Colleen Phillips", part: "Alto", sectionLeader: true },
-    { id: 2650, name: "Farrell Hall", part: "Baritone", sectionLeader: true },
-    { id: 2657, name: "Mark Dunkley", part: "Tenor", sectionLeader: false },
-    { id: 2677, name: "Linda Oppong", part: "Alto", sectionLeader: false },
-    { id: 2685, name: "Pam Tolson", part: "Soprano", sectionLeader: true },
-    { id: 2711, name: "Jewel Scott", part: "Soprano", sectionLeader: false },
-    { id: 2719, name: "Sydney Ambrose", part: "Alto", sectionLeader: true },
-    { id: 2727, name: "Sanjay Gibson", part: "Bass", sectionLeader: false },
-    { id: 2729, name: "Ayinde Roberts", part: "Bass", sectionLeader: false },
-    { id: 2738, name: "Shelley Patrick", part: "Alto", sectionLeader: false },
-    { id: 2748, name: "Winston Simpson", part: "Tenor", sectionLeader: false },
-    { id: 2763, name: "Chris Thompson", part: "Bass", sectionLeader: false },
-    { id: 2770, name: "Lloyd English", part: "Bass", sectionLeader: false },
-    { id: 2779, name: "Audrey Mitchell", part: "Tenor", sectionLeader: true },
-    { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true }
+    { id: 2451, name: "Marjorie Dunkley", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2461, name: "Dorreth Ingleton", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2499, name: "Rose Heavens-Worrell", part: "Soprano", sectionLeader: true, gender: "F" },
+    { id: 2509, name: "Curtis Ambrose", part: "Tenor", sectionLeader: false, gender: "M" },
+    { id: 2520, name: "Nigel Worrell", part: "Baritone", sectionLeader: false, gender: "M" },
+    { id: 2537, name: "Michelle Hanson", part: "Alto", sectionLeader: false, gender: "F" },
+    { id: 2551, name: "Brenda Knight", part: "Alto", sectionLeader: false, gender: "F" },
+    { id: 2558, name: "Andrew Stewart", part: "Baritone", sectionLeader: false, gender: "M" },
+    { id: 2559, name: "Vanessa Burton", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2567, name: "Eslyn Blair", part: "Tenor", sectionLeader: false, gender: "F" },
+    { id: 2574, name: "Margaret Simpson", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2586, name: "June Smith", part: "Alto", sectionLeader: false, gender: "F" },
+    { id: 2589, name: "Molly St. Hillarie", part: "Tenor", sectionLeader: false, gender: "F" },
+    { id: 2602, name: "Mable MacIntosh", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2622, name: "Annette Radelin", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2627, name: "Claudia Stewart-Philip", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2643, name: "Colleen Phillips", part: "Alto", sectionLeader: true, gender: "F" },
+    { id: 2650, name: "Farrell Hall", part: "Baritone", sectionLeader: true, gender: "M" },
+    { id: 2657, name: "Mark Dunkley", part: "Tenor", sectionLeader: false, gender: "M" },
+    { id: 2677, name: "Linda Oppong", part: "Alto", sectionLeader: false, gender: "F" },
+    { id: 2685, name: "Pam Tolson", part: "Soprano", sectionLeader: true, gender: "F" },
+    { id: 2711, name: "Jewel Scott", part: "Soprano", sectionLeader: false, gender: "F" },
+    { id: 2719, name: "Sydney Ambrose", part: "Alto", sectionLeader: true, gender: "F" },
+    { id: 2727, name: "Sanjay Gibson", part: "Bass", sectionLeader: false, gender: "M" },
+    { id: 2729, name: "Ayinde Roberts", part: "Bass", sectionLeader: false, gender: "F" },
+    { id: 2738, name: "Shelley Patrick", part: "Alto", sectionLeader: false, gender: "F" },
+    { id: 2748, name: "Winston Simpson", part: "Tenor", sectionLeader: false, gender: "M" },
+    { id: 2763, name: "Chris Thompson", part: "Bass", sectionLeader: false, gender: "M" },
+    { id: 2770, name: "Lloyd English", part: "Bass", sectionLeader: false, gender: "M" },
+    { id: 2779, name: "Audrey Mitchell", part: "Tenor", sectionLeader: true, gender: "F" },
+    { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true, gender: "F" }
   ];
 
   const singer = singers.find(s => s.id === parseInt(id));
@@ -133,7 +133,7 @@ function SingerDetail() {
             <div className="col-lg-6">
               <h2 className="section-title text-white mb-4">About {singer.name.split(' ')[0]}</h2>
               <p className="text-light-muted fs-5 mb-4">
-                {singer.name} is a valued member of Choral Expressions, contributing their voice to the {singer.part} section.
+                {singer.name} is a valued member of Choral Expressions, contributing {singer.gender === 'M' ? 'his' : 'her'} voice to the {singer.part} section.
               </p>
               
               <div className="donation-card mb-4">
@@ -151,7 +151,7 @@ function SingerDetail() {
                     <i className="bi bi-star-fill me-2"></i>Section Leader
                   </h4>
                   <p className="text-light-muted mb-0">
-                    As a section leader, {singer.name.split(' ')[0]} provides guidance and support to fellow {singer.part} singers, helping to maintain the excellence and unity of the section.
+                    As a section leader, {singer.name.split(' ')[0]} provides guidance and support to {singer.gender === 'M' ? 'his' : 'her'} fellow {singer.part} singers, helping to maintain the excellence and unity of the section.
                   </p>
                 </div>
               )}
