@@ -8,10 +8,10 @@ function SingerDetail() {
     { id: 2461, name: "Dorreth Ingleton", part: "Soprano", sectionLeader: false },
     { id: 2499, name: "Rose Heavens-Worrell", part: "Soprano", sectionLeader: true },
     { id: 2509, name: "Curtis Ambrose", part: "Tenor", sectionLeader: false },
-    { id: 2520, name: "Nigel Worrell", part: "Bass", sectionLeader: false },
+    { id: 2520, name: "Nigel Worrell", part: "Baritone", sectionLeader: false },
     { id: 2537, name: "Michelle Hanson", part: "Alto", sectionLeader: false },
     { id: 2551, name: "Brenda Knight", part: "Alto", sectionLeader: false },
-    { id: 2558, name: "Andrew Stewart", part: "Bass", sectionLeader: false },
+    { id: 2558, name: "Andrew Stewart", part: "Baritone", sectionLeader: false },
     { id: 2559, name: "Vanessa Burton", part: "Soprano", sectionLeader: false },
     { id: 2567, name: "Eslyn Blair", part: "Tenor", sectionLeader: false },
     { id: 2574, name: "Margaret Simpson", part: "Soprano", sectionLeader: false },
@@ -21,7 +21,7 @@ function SingerDetail() {
     { id: 2622, name: "Annette Radelin", part: "Soprano", sectionLeader: false },
     { id: 2627, name: "Claudia Stewart-Philip", part: "Soprano", sectionLeader: false },
     { id: 2643, name: "Colleen Phillips", part: "Alto", sectionLeader: true },
-    { id: 2650, name: "Farrell Hall", part: "Bass", sectionLeader: true },
+    { id: 2650, name: "Farrell Hall", part: "Baritone", sectionLeader: true },
     { id: 2657, name: "Mark Dunkley", part: "Tenor", sectionLeader: false },
     { id: 2677, name: "Linda Oppong", part: "Alto", sectionLeader: false },
     { id: 2685, name: "Pam Tolson", part: "Soprano", sectionLeader: true },
@@ -34,8 +34,7 @@ function SingerDetail() {
     { id: 2763, name: "Chris Thompson", part: "Bass", sectionLeader: false },
     { id: 2770, name: "Lloyd English", part: "Bass", sectionLeader: false },
     { id: 2779, name: "Audrey Mitchell", part: "Tenor", sectionLeader: true },
-    { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true },
-    { id: 2817, name: "Melvin Tolson", part: "Director", sectionLeader: false }
+    { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true }
   ];
 
   const singer = singers.find(s => s.id === parseInt(id));
@@ -58,6 +57,7 @@ function SingerDetail() {
       case 'Soprano': return 'text-warning';
       case 'Alto': return 'text-info';
       case 'Tenor': return 'text-success';
+      case 'Baritone': return 'text-warning';
       case 'Bass': return 'text-danger';
       case 'Director': return 'text-gold';
       default: return 'text-light';
@@ -69,6 +69,7 @@ function SingerDetail() {
       case 'Soprano': return 'The highest vocal range, known for its bright and soaring quality.';
       case 'Alto': return 'A lower vocal range, providing rich harmonies and depth to the ensemble.';
       case 'Tenor': return 'A higher vocal range, often carrying the melody with power and clarity.';
+      case 'Baritone': return 'A warm, middle-range voice bridging tenor and bass with rich, versatile tone.';
       case 'Bass': return 'The lowest vocal range, providing the foundation and strength of the choir.';
       case 'Director': return 'Leading Choral Expressions with vision, artistry, and dedication.';
       default: return '';

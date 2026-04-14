@@ -6,10 +6,10 @@ function Highlights() {
     { id: 2461, name: "Dorreth Ingleton", part: "Soprano", sectionLeader: false },
     { id: 2499, name: "Rose Heavens-Worrell", part: "Soprano", sectionLeader: true },
     { id: 2509, name: "Curtis Ambrose", part: "Tenor", sectionLeader: false },
-    { id: 2520, name: "Nigel Worrell", part: "Bass", sectionLeader: false },
+    { id: 2520, name: "Nigel Worrell", part: "Baritone", sectionLeader: false },
     { id: 2537, name: "Michelle Hanson", part: "Alto", sectionLeader: false },
     { id: 2551, name: "Brenda Knight", part: "Alto", sectionLeader: false },
-    { id: 2558, name: "Andrew Stewart", part: "Bass", sectionLeader: false },
+    { id: 2558, name: "Andrew Stewart", part: "Baritone", sectionLeader: false },
     { id: 2559, name: "Vanessa Burton", part: "Soprano", sectionLeader: false },
     { id: 2567, name: "Eslyn Blair", part: "Tenor", sectionLeader: false },
     { id: 2574, name: "Margaret Simpson", part: "Soprano", sectionLeader: false },
@@ -19,7 +19,7 @@ function Highlights() {
     { id: 2622, name: "Annette Radelin", part: "Soprano", sectionLeader: false },
     { id: 2627, name: "Claudia Stewart-Philip", part: "Soprano", sectionLeader: false },
     { id: 2643, name: "Colleen Phillips", part: "Alto", sectionLeader: true },
-    { id: 2650, name: "Farrell Hall", part: "Bass", sectionLeader: true },
+    { id: 2650, name: "Farrell Hall", part: "Baritone", sectionLeader: true },
     { id: 2657, name: "Mark Dunkley", part: "Tenor", sectionLeader: false },
     { id: 2677, name: "Linda Oppong", part: "Alto", sectionLeader: false },
     { id: 2685, name: "Pam Tolson", part: "Soprano", sectionLeader: true },
@@ -33,12 +33,11 @@ function Highlights() {
     { id: 2770, name: "Lloyd English", part: "Bass", sectionLeader: false },
     { id: 2779, name: "Audrey Mitchell", part: "Tenor", sectionLeader: true },
     { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true },
-    { id: 2817, name: "Melvin Tolson", part: "Director", sectionLeader: false },
-    { id: null, name: "Christine Thompson", part: "Alto", sectionLeader: false }
+        { id: null, name: "Christine Thompson", part: "Alto", sectionLeader: false }
   ];
 
-  // Sort singers by section: Soprano, Alto, Tenor, Bass, Director
-  const sectionOrder = { 'Soprano': 1, 'Alto': 2, 'Tenor': 3, 'Bass': 4, 'Director': 5 };
+  // Sort singers by section: Soprano, Alto, Tenor, Baritone, Bass, Director
+  const sectionOrder = { 'Soprano': 1, 'Alto': 2, 'Tenor': 3, 'Baritone': 4, 'Bass': 5, 'Director': 6 };
   const singers = [...singersData].sort((a, b) => {
     return sectionOrder[a.part] - sectionOrder[b.part];
   });
@@ -48,6 +47,7 @@ function Highlights() {
       case 'Soprano': return 'text-gold';
       case 'Alto': return 'text-info';
       case 'Tenor': return 'text-success';
+      case 'Baritone': return 'text-warning';
       case 'Bass': return 'text-danger';
       case 'Director': return 'text-gold';
       default: return 'text-light';
@@ -59,6 +59,7 @@ function Highlights() {
       case 'Soprano': return 'badge bg-warning text-dark';
       case 'Alto': return 'badge bg-info';
       case 'Tenor': return 'badge bg-success';
+      case 'Baritone': return 'badge bg-warning';
       case 'Bass': return 'badge bg-danger';
       case 'Director': return 'badge bg-gold text-dark';
       default: return 'badge bg-secondary';

@@ -177,6 +177,7 @@ function JoinUs() {
                       <option value="Soprano">Soprano</option>
                       <option value="Alto">Alto</option>
                       <option value="Tenor">Tenor</option>
+                      <option value="Baritone">Baritone</option>
                       <option value="Bass">Bass</option>
                       <option value="Not Sure">Not Sure</option>
                     </select>
