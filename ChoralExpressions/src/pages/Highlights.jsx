@@ -34,7 +34,7 @@ function Highlights() {
     { id: 2779, name: "Audrey Mitchell", part: "Tenor", sectionLeader: true },
     { id: 2811, name: "Claudia Mitchell", part: "Tenor", sectionLeader: true },
     { id: 2817, name: "Melvin Tolson", part: "Director", sectionLeader: false },
-    { id: null, name: "Christine Thompson", part: "Soprano", sectionLeader: false }
+    { id: null, name: "Christine Thompson", part: "Alto", sectionLeader: false }
   ];
 
   // Sort singers by section: Soprano, Alto, Tenor, Bass, Director
@@ -141,9 +141,9 @@ function Highlights() {
         <div className="container">
           <h2 className="text-white mb-3">Join Our Choir</h2>
           <p className="text-light-muted mb-4">Interested in becoming part of Choral Expressions?</p>
-          <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
-            <i className="bi bi-envelope me-2"></i>Contact Us
-          </a>
+          <Link to="/join-us" className="btn btn-gold btn-lg rounded-pill px-5">
+            <i className="bi bi-music-note-list me-2"></i>Join Us
+          </Link>
         </div>
       </section>
     </>

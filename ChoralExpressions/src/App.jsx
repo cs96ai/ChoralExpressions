@@ -14,6 +14,7 @@ import AboutDirector from './pages/AboutDirector';
 import Events from './pages/Events';
 import Highlights from './pages/Highlights';
 import SingerDetail from './pages/SingerDetail';
+import JoinUs from './pages/JoinUs';
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/members" element={<Highlights />} />
           <Route path="/members/:id" element={<SingerDetail />} />
+          <Route path="/join-us" element={<JoinUs />} />
         </Routes>
       </Layout>
     </Router>

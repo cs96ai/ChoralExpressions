@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Request model
+# Request models
 class BookingRequest(BaseModel):
     name: str
     email: EmailStr
@@ -30,6 +30,13 @@ class BookingRequest(BaseModel):
     eventDate: str
     venueLocation: str
     details: str = ""
+
+class JoinRequest(BaseModel):
+    name: str
+    email: EmailStr
+    phone: str = ""
+    voicePart: str = ""
+    message: str
 
 # Gmail configuration
 GMAIL_USER = os.getenv("GMAIL_USER", "choralexpressionss@gmail.com")
@@ -218,6 +225,189 @@ Submitted: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         return {
             "success": True,
             "message": "Booking inquiry sent successfully"
+        }
+
+    except smtplib.SMTPAuthenticationError:
+        raise HTTPException(
+            status_code=500,
+            detail="Email authentication failed. Please check Gmail credentials."
+        )
+    except Exception as e:
+        print(f"Error sending email: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to send email: {str(e)}"
+        )
+
+@app.post("/api/join")
+async def send_join_inquiry(join: JoinRequest):
+    try:
+        # Create HTML email content
+        html_content = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            background-color: #1a0505;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }}
+        .container {{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #2b1111;
+            border-radius: 10px;
+            padding: 30px;
+            border: 2px solid #d4af37;
+        }}
+        .header {{
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }}
+        .header h1 {{
+            color: #d4af37;
+            margin: 0;
+            font-size: 28px;
+        }}
+        .header p {{
+            color: #888;
+            margin: 10px 0 0 0;
+        }}
+        .info-table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }}
+        .info-table tr {{
+            border-bottom: 1px solid #444;
+        }}
+        .info-table td {{
+            padding: 15px 10px;
+        }}
+        .info-table td:first-child {{
+            color: #d4af37;
+            font-weight: bold;
+            width: 40%;
+        }}
+        .info-table td:last-child {{
+            color: #ffffff;
+        }}
+        .details-section {{
+            background-color: #1a0505;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #d4af37;
+        }}
+        .details-section h3 {{
+            color: #d4af37;
+            margin-top: 0;
+        }}
+        .details-section p {{
+            color: #cccccc;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }}
+        .footer {{
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #d4af37;
+            color: #888;
+            font-size: 12px;
+        }}
+        .icon {{
+            color: #d4af37;
+            margin-right: 8px;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 New Choir Membership Inquiry</h1>
+            <p>Choral Expressions Website</p>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td><span class="icon">👤</span>Name:</td>
+                <td>{join.name}</td>
+            </tr>
+            <tr>
+                <td><span class="icon">📧</span>Email:</td>
+                <td><a href="mailto:{join.email}" style="color: #d4af37; text-decoration: none;">{join.email}</a></td>
+            </tr>
+            <tr>
+                <td><span class="icon">📱</span>Phone:</td>
+                <td>{join.phone or 'Not provided'}</td>
+            </tr>
+            <tr>
+                <td><span class="icon">🎵</span>Voice Part:</td>
+                <td>{join.voicePart or 'Not specified'}</td>
+            </tr>
+        </table>
+
+        <div class='details-section'>
+            <h3>About the Applicant:</h3>
+            <p>{join.message}</p>
+        </div>
+
+        <div class="footer">
+            <p>Submitted on: {datetime.now().strftime('%A, %B %d, %Y at %I:%M %p EST')}</p>
+            <p style="margin-top: 10px;">
+                <strong>Next Steps:</strong> Please respond to this inquiry within one business day.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+        """
+
+        # Create plain text version
+        text_content = f"""
+NEW CHOIR MEMBERSHIP INQUIRY - CHORAL EXPRESSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Contact Information:
+• Name: {join.name}
+• Email: {join.email}
+• Phone: {join.phone or 'Not provided'}
+• Voice Part: {join.voicePart or 'Not specified'}
+
+About the Applicant:
+{join.message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Submitted: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+        """
+
+        # Create message
+        message = MIMEMultipart("alternative")
+        message["Subject"] = f"New Choir Membership Inquiry - {join.name}"
+        message["From"] = f"Choral Expressions Website <{GMAIL_USER}>"
+        message["To"] = ", ".join(RECIPIENTS)
+        message["Reply-To"] = join.email
+
+        # Attach both plain text and HTML versions
+        part1 = MIMEText(text_content, "plain")
+        part2 = MIMEText(html_content, "html")
+        message.attach(part1)
+        message.attach(part2)
+
+        # Send email via Gmail SMTP
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(GMAIL_USER, GMAIL_PASS)
+            server.send_message(message)
+
+        return {
+            "success": True,
+            "message": "Join inquiry sent successfully"
         }
 
     except smtplib.SMTPAuthenticationError:
