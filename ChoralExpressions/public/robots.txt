@@ -1,0 +1,15 @@
+# Robots.txt for Choral Expressions
+# Allow all crawlers to access the site
+
+User-agent: *
+Allow: /
+
+# Disallow certain directories if needed
+# Disallow: /api/
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://choral-expressions.fly.dev/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+# Crawl-delay: 1
