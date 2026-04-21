@@ -35,39 +35,39 @@ function Events() {
                     />
                   </div>
                   <div className="col-lg-7">
-                    <div className="mb-4">
-                      <h2 className="text-white mb-3">Drinking from the Well</h2>
-                      <p className="text-gold fs-5 mb-4">
+                    <div className="mb-3">
+                      <h2 className="text-white mb-2">Drinking from the Well</h2>
+                      <p className="text-gold fs-5 mb-3">
                         Come and experience an evening of praise to refresh the soul
                       </p>
                     </div>
 
-                    <div className="row g-3 mb-4">
+                    <div className="row g-2 mb-3">
                       <div className="col-md-6">
-                        <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                          <i className="bi bi-calendar3 text-gold fs-3 mb-2 d-block"></i>
+                        <div className="p-2 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+                          <i className="bi bi-calendar3 text-gold fs-3 mb-1 d-block"></i>
                           <h5 className="text-white mb-1">Date</h5>
                           <p className="text-light-muted mb-0">Saturday, June 13, 2026</p>
                         </div>
                       </div>
                       <div className="col-md-6">
-                        <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                          <i className="bi bi-clock text-gold fs-3 mb-2 d-block"></i>
+                        <div className="p-2 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+                          <i className="bi bi-clock text-gold fs-3 mb-1 d-block"></i>
                           <h5 className="text-white mb-1">Time</h5>
                           <p className="text-light-muted mb-0">6:30 PM</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-3 rounded mb-4" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                      <i className="bi bi-geo-alt text-gold fs-3 mb-2 d-block"></i>
-                      <h5 className="text-white mb-2">Venue</h5>
+                    <div className="p-2 rounded mb-3" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+                      <i className="bi bi-geo-alt text-gold fs-3 mb-1 d-block"></i>
+                      <h5 className="text-white mb-1">Venue</h5>
                       <p className="text-light-muted mb-0">Kingsview Village Seventh-day Adventist Church</p>
                       <p className="text-light-muted mb-0">70 Kingsview Boulevard</p>
                       <p className="text-light-muted mb-0">Etobicoke, Ontario M9R IT9</p>
                     </div>
 
-                    <div className="alert alert-info border-0 mb-4" style={{background: 'rgba(212, 175, 55, 0.15)'}}>
+                    <div className="alert alert-info border-0 mb-0" style={{background: 'rgba(212, 175, 55, 0.15)'}}>
                       <i className="bi bi-info-circle text-gold me-2"></i>
                       <span className="text-light">FREEWILL OFFERING WILL BE COLLECTED</span>
                     </div>
