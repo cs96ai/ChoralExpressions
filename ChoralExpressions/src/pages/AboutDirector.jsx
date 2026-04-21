@@ -208,8 +208,8 @@ function AboutDirector() {
 
       <section className="section-dark text-center py-5">
         <div className="container">
-          <h2 className="text-white mb-3">Experience the Tolson Legacy</h2>
-          <p className="text-light-muted mb-4">Witness the artistry and passion of Choral Expressions under Melvin's direction.</p>
+          <h2 className="text-white mb-3">Experience Our Musical Legacy</h2>
+          <p className="text-light-muted mb-4">Witness the artistry and passion of Choral Expressions.</p>
           <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
             <i className="bi bi-calendar-event me-2"></i>Book a Performance
           </a>
