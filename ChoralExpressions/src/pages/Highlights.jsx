@@ -125,7 +125,7 @@ function Highlights() {
                       <span className={getPartBadge(singer.part)}>{singer.part}</span>
                       {singer.sectionLeader && (
                         <div className="mt-2">
-                          <span className="badge bg-gold text-dark">
+                          <span className="badge text-dark" style={{backgroundColor: '#d4af37'}}>
                             <i className="bi bi-star-fill me-1"></i>Section Leader
                           </span>
                         </div>
