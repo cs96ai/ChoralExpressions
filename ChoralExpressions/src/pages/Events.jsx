@@ -24,56 +24,62 @@ function Events() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="text-center mb-5">
-                <h2 className="section-title text-white">April Concert</h2>
-                <p className="section-subtitle">Mark your calendars for an unforgettable evening</p>
-              </div>
-
-              <div className="donation-card text-center">
-                <div className="mb-4">
-                  <i className="bi bi-music-note-beamed fs-1 text-gold mb-3 d-block"></i>
-                  <h3 className="text-white mb-3">Spring Concert 2026</h3>
-                  <p className="text-light-muted fs-5 mb-4">
-                    Join Choral Expressions for an evening of inspiring music featuring classical masterworks, 
-                    spirituals, and contemporary arrangements.
-                  </p>
-                </div>
-
-                <div className="row g-4 mb-4">
-                  <div className="col-md-4">
-                    <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                      <i className="bi bi-calendar3 text-gold fs-3 mb-2 d-block"></i>
-                      <h5 className="text-white mb-1">Date</h5>
-                      <p className="text-light-muted mb-0">April 2026</p>
-                      <p className="text-light-muted small mb-0">(Specific date TBA)</p>
-                    </div>
+              <div className="donation-card">
+                <div className="row">
+                  <div className="col-lg-5 mb-4 mb-lg-0">
+                    <img 
+                      src="/events/June13th2026.jpeg" 
+                      alt="Drinking from the Well Concert" 
+                      className="img-fluid rounded shadow-lg w-100"
+                      style={{maxHeight: '400px', objectFit: 'cover'}}
+                    />
                   </div>
-                  <div className="col-md-4">
-                    <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
-                      <i className="bi bi-clock text-gold fs-3 mb-2 d-block"></i>
-                      <h5 className="text-white mb-1">Time</h5>
-                      <p className="text-light-muted mb-0">7:00 PM</p>
-                      <p className="text-light-muted small mb-0">(Doors open at 6:30 PM)</p>
+                  <div className="col-lg-7">
+                    <div className="mb-4">
+                      <h2 className="text-white mb-3">Drinking from the Well</h2>
+                      <p className="text-gold fs-5 mb-4">
+                        Come and experience an evening of praise to refresh the soul
+                      </p>
                     </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+
+                    <div className="row g-3 mb-4">
+                      <div className="col-md-6">
+                        <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+                          <i className="bi bi-calendar3 text-gold fs-3 mb-2 d-block"></i>
+                          <h5 className="text-white mb-1">Date</h5>
+                          <p className="text-light-muted mb-0">Saturday, June 13, 2026</p>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="p-3 rounded" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
+                          <i className="bi bi-clock text-gold fs-3 mb-2 d-block"></i>
+                          <h5 className="text-white mb-1">Time</h5>
+                          <p className="text-light-muted mb-0">6:30 PM</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-3 rounded mb-4" style={{background: 'rgba(212, 175, 55, 0.1)'}}>
                       <i className="bi bi-geo-alt text-gold fs-3 mb-2 d-block"></i>
-                      <h5 className="text-white mb-1">Venue</h5>
-                      <p className="text-light-muted mb-0">TBA</p>
-                      <p className="text-light-muted small mb-0">Toronto, Ontario</p>
+                      <h5 className="text-white mb-2">Venue</h5>
+                      <p className="text-light-muted mb-0">Kingsview Village Seventh-day Adventist Church</p>
+                      <p className="text-light-muted mb-0">70 Kingsview Boulevard</p>
+                      <p className="text-light-muted mb-0">Etobicoke, Ontario M9R IT9</p>
                     </div>
+
+                    <div className="alert alert-info border-0 mb-4" style={{background: 'rgba(212, 175, 55, 0.15)'}}>
+                      <i className="bi bi-info-circle text-gold me-2"></i>
+                      <span className="text-light">FREEWILL OFFERING WILL BE COLLECTED</span>
+                    </div>
+
+                    <a href="https://www.choralexpressions.ca" target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-lg rounded-pill px-5 me-3">
+                      <i className="bi bi-globe me-2"></i>Visit Website
+                    </a>
+                    <a href="/#contact" className="btn btn-outline-gold btn-lg rounded-pill px-5">
+                      <i className="bi bi-envelope me-2"></i>Contact Us
+                    </a>
                   </div>
                 </div>
-
-                <div className="alert alert-info border-0 mb-4" style={{background: 'rgba(212, 175, 55, 0.15)'}}>
-                  <i className="bi bi-info-circle text-gold me-2"></i>
-                  <span className="text-light">More details coming soon! Check back for updates on venue and ticketing information.</span>
-                </div>
-
-                <a href="/#contact" className="btn btn-gold btn-lg rounded-pill px-5">
-                  <i className="bi bi-envelope me-2"></i>Contact Us for More Information
-                </a>
               </div>
             </div>
           </div>
