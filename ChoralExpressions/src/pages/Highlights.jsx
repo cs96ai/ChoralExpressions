@@ -92,11 +92,11 @@ function Highlights() {
           <div className="row g-4">
             {singers.map((singer, index) => (
               <div key={index} className="col-6 col-md-4 col-lg-3">
-                <Link 
+                {/* <Link 
                   to={singer.id ? `/members/${singer.id}` : '#'} 
                   className="text-decoration-none"
                   style={{ pointerEvents: singer.id ? 'auto' : 'none' }}
-                >
+                > */}
                   <div className="card service-card h-100 text-white border-0 position-relative" style={{ overflow: 'hidden' }}>
                     {singer.id ? (
                       <img 
@@ -139,7 +139,7 @@ function Highlights() {
                       </div>
                     )}
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
             ))}
           </div>
