@@ -65,12 +65,12 @@ function Highlights() {
   const getPartBadge = (part) => {
     switch(part) {
       case 'Soprano': return 'badge bg-warning text-dark';
-      case 'Alto': return 'badge bg-info';
-      case 'Tenor': return 'badge bg-success';
-      case 'Baritone': return 'badge bg-warning';
-      case 'Bass': return 'badge bg-danger';
+      case 'Alto': return 'badge bg-info text-dark';
+      case 'Tenor': return 'badge bg-success text-dark';
+      case 'Baritone': return 'badge bg-warning text-dark';
+      case 'Bass': return 'badge bg-danger text-dark';
       case 'Director': return 'badge bg-gold text-dark';
-      default: return 'badge bg-secondary';
+      default: return 'badge bg-secondary text-dark';
     }
   };
 
