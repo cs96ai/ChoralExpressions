@@ -31,7 +31,7 @@ function Events() {
                       src="/events/June13th2026.jpeg" 
                       alt="Drinking from the Well Concert" 
                       className="img-fluid rounded shadow-lg w-100"
-                      style={{maxHeight: '400px', objectFit: 'cover'}}
+                      style={{maxHeight: '500px', objectFit: 'cover'}}
                     />
                   </div>
                   <div className="col-lg-7">
@@ -71,13 +71,6 @@ function Events() {
                       <i className="bi bi-info-circle text-gold me-2"></i>
                       <span className="text-light">FREEWILL OFFERING WILL BE COLLECTED</span>
                     </div>
-
-                    <a href="https://www.choralexpressions.ca" target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-lg rounded-pill px-5 me-3">
-                      <i className="bi bi-globe me-2"></i>Visit Website
-                    </a>
-                    <a href="/#contact" className="btn btn-outline-gold btn-lg rounded-pill px-5">
-                      <i className="bi bi-envelope me-2"></i>Contact Us
-                    </a>
                   </div>
                 </div>
               </div>
