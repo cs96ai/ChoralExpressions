@@ -38,7 +38,7 @@ function AboutDirector() {
                 <div className="position-absolute bottom-0 start-0 end-0 p-4 text-center" 
                      style={{background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)'}}>
                   <h3 className="text-white mb-1">Melvin Tolson</h3>
-                  <p className="text-gold mb-0">Artistic Director</p>
+                  <p className="text-gold mb-0">Director</p>
                 </div>
               </div>
             </div>
