@@ -31,7 +31,7 @@ function Events() {
                       src="/events/June13th2026.jpeg" 
                       alt="Drinking from the Well Concert" 
                       className="img-fluid rounded shadow-lg w-100"
-                      style={{maxHeight: '500px', objectFit: 'cover'}}
+                      style={{maxHeight: '560px', objectFit: 'cover'}}
                     />
                   </div>
                   <div className="col-lg-7">
