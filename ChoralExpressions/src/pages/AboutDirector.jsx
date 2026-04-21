@@ -162,7 +162,7 @@ function AboutDirector() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="text-center mb-5">
-                <h2 className="section-title text-white">The Tolson Touch</h2>
+                <h2 className="section-title text-white">The Director's Touch</h2>
                 <p className="section-subtitle">What makes his leadership extraordinary</p>
               </div>
 
