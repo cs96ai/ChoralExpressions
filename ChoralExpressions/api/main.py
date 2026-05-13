@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -6,17 +6,57 @@ from pydantic import BaseModel, EmailStr
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 from pathlib import Path
+from collections import defaultdict
+from time import time
 
 app = FastAPI()
+
+# Simple in-memory rate limiter
+class RateLimiter:
+    def __init__(self):
+        self.requests = defaultdict(list)
+        self.max_requests = 10  # Max 10 requests
+        self.window = 60  # Per 60 seconds
+
+    def is_allowed(self, client_ip: str) -> bool:
+        now = time()
+        # Remove old requests outside the window
+        self.requests[client_ip] = [
+            req_time for req_time in self.requests[client_ip]
+            if now - req_time < self.window
+        ]
+        # Check if under limit
+        if len(self.requests[client_ip]) >= self.max_requests:
+            return False
+        # Add current request
+        self.requests[client_ip].append(now)
+        return True
+
+rate_limiter = RateLimiter()
+
+def get_client_ip(request: Request) -> str:
+    # Get client IP from headers (handles reverse proxy)
+    forwarded = request.headers.get("x-forwarded-for")
+    if forwarded:
+        return forwarded.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
 
 # CORS middleware to allow React frontend to call the API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your domain
-    allow_credentials=True,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://choral-expressions.fly.dev",
+        "https://choralexpressions.ca",
+        "https://www.choralexpressions.ca",
+        "https://choralexpressions.com",
+        "https://www.choralexpressions.com",
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -48,7 +88,14 @@ def health_check():
     return {"status": "ok", "message": "Email API is running"}
 
 @app.post("/api/send-booking")
-async def send_booking(booking: BookingRequest):
+async def send_booking(booking: BookingRequest, request: Request):
+    # Rate limiting check
+    client_ip = get_client_ip(request)
+    if not rate_limiter.is_allowed(client_ip):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please try again later."
+        )
     try:
         # Create HTML email content
         html_content = f"""
@@ -240,7 +287,14 @@ Submitted: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         )
 
 @app.post("/api/join")
-async def send_join_inquiry(join: JoinRequest):
+async def send_join_inquiry(join: JoinRequest, request: Request):
+    # Rate limiting check
+    client_ip = get_client_ip(request)
+    if not rate_limiter.is_allowed(client_ip):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please try again later."
+        )
     try:
         # Create HTML email content
         html_content = f"""
